@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Reveal from "./Reveal";
 import Counter from "./Counter";
 
@@ -29,57 +30,40 @@ const icons = {
   ),
 };
 
-const stats = [
-  {
-    icon: icons.warehouse,
-    pre: "+",
-    n: 90,
-    label: "Entreprises équipées",
-    text: "Des sites industriels accompagnés au Maroc, de l'étude au montage.",
-  },
-  {
-    icon: icons.alliance,
-    pre: "",
-    n: 2,
-    label: "Partenaires européens",
-    text: "STOW et MANORGA pour couvrir les systèmes lourds, légers et plateformes.",
-  },
-  {
-    icon: icons.workflow,
-    pre: "",
-    n: 6,
-    label: "Étapes maîtrisées",
-    text: "Audit, relevé, conception 3D, fabrication, installation, contrôle et SAV.",
-  },
+const metrics = [
+  { icon: icons.warehouse, pre: "+", n: 90 },
+  { icon: icons.alliance, pre: "", n: 2 },
+  { icon: icons.workflow, pre: "", n: 6 },
 ];
 
 export default function Stats() {
+  const t = useTranslations("stats");
+  const items = t.raw("items") as Array<{ label: string; text: string }>;
+
   return (
-    <section className="relative px-[max(22px,4vw)] py-[72px] md:py-24">
+    <section className="relative px-[max(16px,4vw)] py-12 md:px-[max(22px,4vw)] md:py-24">
       <div className="mx-auto max-w-[1240px]">
-        <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div className="mb-7 flex flex-col justify-between gap-4 md:mb-10 md:flex-row md:items-end md:gap-5">
           <Reveal>
             <div>
-              <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">Chiffres clés</p>
-              <h2 className="mt-4 max-w-[12ch] text-[clamp(34px,4.6vw,64px)] font-semibold leading-[.98] tracking-[-.03em] text-ink">
-                Une base solide dès le départ.
+              <p className="text-[10px] font-bold uppercase tracking-[.22em] text-orange md:text-[12px] md:tracking-[.24em]">{t("eyebrow")}</p>
+              <h2 className="mt-3 max-w-[12ch] text-[32px] font-semibold leading-[1] tracking-[-.03em] text-ink md:mt-4 md:text-[clamp(34px,4.6vw,64px)] md:leading-[.98]">
+                {t("title")}
               </h2>
             </div>
           </Reveal>
           <Reveal>
-            <p className="max-w-[48ch] text-[16px] font-medium leading-[1.65] text-ink2">
-              Trois repères rapides avant d'entrer dans les partenaires, les solutions et la méthode OMAK.
-            </p>
+            <p className="max-w-[48ch] text-[14px] font-medium leading-[1.6] text-ink2 md:text-[16px] md:leading-[1.65]">{t("intro")}</p>
           </Reveal>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
-          {stats.map((s, index) => (
-            <Reveal key={s.label}>
-              <article className="group relative min-h-[310px] overflow-hidden rounded-[30px] border border-black/10 bg-white p-7 shadow-[0_20px_70px_rgba(17,19,21,.07)]">
-                <div className="pointer-events-none absolute -right-16 -top-16 h-[168px] w-[168px] rounded-full bg-orange/10 transition-transform duration-500 group-hover:scale-125" />
+        <div className="grid gap-3 md:grid-cols-3 md:gap-5">
+          {metrics.map((s, index) => (
+            <Reveal key={index}>
+              <article className="group relative min-h-[220px] overflow-hidden rounded-[24px] border border-black/10 bg-white p-5 shadow-[0_20px_70px_rgba(17,19,21,.07)] md:min-h-[310px] md:rounded-[30px] md:p-7">
+                <div className="pointer-events-none absolute -right-16 -top-16 h-[140px] w-[140px] rounded-full bg-orange/10 transition-transform duration-500 group-hover:scale-125 md:h-[168px] md:w-[168px]" />
                 <div className="relative flex items-start justify-between gap-4">
-                  <div className="grid h-16 w-16 place-items-center rounded-[20px] bg-orange text-white shadow-[0_16px_34px_rgba(242,72,28,.28)]">
+                  <div className="grid h-12 w-12 place-items-center rounded-[16px] bg-orange text-white shadow-[0_16px_34px_rgba(242,72,28,.28)] md:h-16 md:w-16 md:rounded-[20px]">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -87,7 +71,7 @@ export default function Stats() {
                       strokeWidth={1.8}
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="h-8 w-8"
+                      className="h-6 w-6 md:h-8 md:w-8"
                       aria-hidden="true"
                     >
                       {s.icon}
@@ -98,13 +82,13 @@ export default function Stats() {
                   </span>
                 </div>
 
-                <div className="relative mt-10">
-                  <div className="font-nb text-[clamp(56px,6vw,86px)] font-bold leading-none tracking-[-.05em] text-orange">
+                <div className="relative mt-6 md:mt-10">
+                  <div className="font-nb text-[48px] font-bold leading-none tracking-[-.05em] text-orange md:text-[clamp(56px,6vw,86px)]">
                     {s.pre}
                     <Counter to={s.n} />
                   </div>
-                  <h3 className="mt-4 text-[13px] font-bold uppercase tracking-[.18em] text-ink">{s.label}</h3>
-                  <p className="mt-5 text-[15px] font-medium leading-[1.6] text-ink2">{s.text}</p>
+                  <h3 className="mt-3 text-[11px] font-bold uppercase tracking-[.16em] text-ink md:mt-4 md:text-[13px] md:tracking-[.18em]">{items[index]?.label}</h3>
+                  <p className="mt-3 text-[13px] font-medium leading-[1.55] text-ink2 md:mt-5 md:text-[15px] md:leading-[1.6]">{items[index]?.text}</p>
                 </div>
               </article>
             </Reveal>

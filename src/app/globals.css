@@ -39,6 +39,20 @@ body {
 h1, h2, h3, .font-title { font-family: var(--font-title); }
 .font-nb { font-family: var(--font-nb); }
 
+/* Arabic (RTL): Grift / NewBlack have no Arabic glyphs, fall back to Cairo */
+[dir="rtl"] body,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] .font-nb,
+[dir="rtl"] .font-title {
+  font-family: "Cairo", "Grift", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+/* Progress bars fill from the start edge in both directions */
+[dir="rtl"] .hero-step-fill { transform-origin: right center; }
+
 ::selection { background: var(--color-orange); color: #fff; }
 
 /* scroll reveals (text + image) */
@@ -222,4 +236,274 @@ h1, h2, h3, .font-title { font-family: var(--font-title); }
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform .12s linear;
+}
+
+.client-orbit-board {
+  position: relative;
+  overflow: visible;
+  border-radius: 42px;
+  padding: clamp(18px, 2.5vw, 30px);
+  background:
+    radial-gradient(58% 52% at 50% 48%, rgba(242, 72, 28, .12), transparent 72%),
+    linear-gradient(135deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .34));
+  box-shadow: 0 26px 90px rgba(17, 19, 21, .08);
+}
+
+.client-orbit-board::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: -1;
+  border: 1px solid rgba(17, 19, 21, .08);
+  border-radius: 36px;
+  background:
+    linear-gradient(rgba(17, 19, 21, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 19, 21, .035) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.client-orbit-rings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  place-items: center;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.client-logo-orbit {
+  --orbit-radius: 122px;
+  --node-size: 60px;
+  position: relative;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  isolation: isolate;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.client-logo-orbit::before,
+.client-logo-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.client-logo-orbit::before {
+  border: 1px solid rgba(17, 19, 21, .08);
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, .96) 0 34%, rgba(255, 255, 255, .72) 35% 42%, transparent 43%),
+    conic-gradient(from 90deg, rgba(242, 72, 28, .26), rgba(17, 19, 21, .04), rgba(242, 72, 28, .2), rgba(17, 19, 21, .04), rgba(242, 72, 28, .26));
+  box-shadow: inset 0 0 0 28px rgba(255, 255, 255, .36), 0 18px 52px rgba(17, 19, 21, .09);
+}
+
+.client-logo-orbit::after {
+  inset: 17%;
+  border: 1px dashed rgba(242, 72, 28, .28);
+}
+
+.client-logo-orbit__spin {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  animation: clientOrbitSpin var(--ring-speed, 42s) linear infinite;
+}
+
+.client-logo-orbit:nth-child(2n) .client-logo-orbit__spin,
+.client-logo-orbit:nth-child(2n) .client-logo-chip {
+  animation-direction: reverse;
+}
+
+.client-logo-node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translate(var(--orbit-radius)) rotate(var(--counter-angle));
+}
+
+.client-logo-chip {
+  display: grid;
+  width: var(--node-size);
+  aspect-ratio: 1;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(17, 19, 21, .08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .96);
+  padding: 7px;
+  box-shadow: 0 14px 32px rgba(17, 19, 21, .12);
+  animation: clientOrbitCounter var(--ring-speed, 42s) linear infinite;
+}
+
+.client-logo-chip img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.client-logo-orbit__center {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: 3;
+  display: grid;
+  width: 44%;
+  min-width: 132px;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  text-align: center;
+}
+
+.client-logo-orbit__center span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--color-orange);
+  color: #fff;
+  font-family: var(--font-nb);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 12px 30px rgba(242, 72, 28, .26);
+}
+
+.client-logo-orbit__center strong {
+  margin-top: 11px;
+  color: var(--color-ink);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.client-logo-orbit__center small {
+  margin-top: 8px;
+  max-width: 18ch;
+  color: var(--color-ink2);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+@keyframes clientOrbitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes clientOrbitCounter {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes clientOrbitGrow {
+  from {
+    opacity: .38;
+    filter: blur(1.4px);
+    transform: scale(.74) translateY(46px);
+  }
+  58% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1) translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .client-logo-orbit {
+    animation: clientOrbitGrow both linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 42%;
+  }
+
+  .client-logo-orbit:nth-child(2) {
+    animation-range: entry 4% cover 46%;
+  }
+
+  .client-logo-orbit:nth-child(3) {
+    animation-range: entry 8% cover 50%;
+  }
+
+  .client-logo-orbit:nth-child(4) {
+    animation-range: entry 12% cover 54%;
+  }
+}
+
+@media (max-width: 900px) {
+  .client-logo-orbit {
+    --orbit-radius: 104px;
+    --node-size: 52px;
+    width: min(100%, 300px);
+  }
+
+  .client-logo-orbit__center {
+    min-width: 116px;
+  }
+}
+
+@media (max-width: 640px) {
+  .client-orbit-board {
+    border-radius: 28px;
+    padding: 14px;
+  }
+
+  .client-orbit-board::before {
+    inset: 8px;
+    border-radius: 24px;
+    background-size: 46px 46px;
+  }
+
+  .client-orbit-rings {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .client-logo-orbit {
+    --orbit-radius: 82px;
+    --node-size: 42px;
+    width: min(72vw, 238px);
+  }
+
+  .client-logo-orbit::before {
+    box-shadow: inset 0 0 0 18px rgba(255, 255, 255, .36), 0 14px 34px rgba(17, 19, 21, .08);
+  }
+
+  .client-logo-chip {
+    padding: 5px;
+  }
+
+  .client-logo-orbit__center {
+    min-width: 94px;
+  }
+
+  .client-logo-orbit__center span {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .client-logo-orbit__center strong {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .client-logo-orbit__center small {
+    margin-top: 6px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-orbit,
+  .client-logo-orbit__spin,
+  .client-logo-chip {
+    animation: none !important;
+  }
 }

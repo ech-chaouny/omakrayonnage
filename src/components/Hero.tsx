@@ -1,51 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import * as THREE from "three";
+import { Link } from "@/i18n/navigation";
 
-const HERO_WORDS = (() => {
-  let index = 0;
-  return [
-    { text: "L'ingénierie", accent: false },
-    { text: "du", accent: false },
-    { text: "stockage.", accent: true },
-  ].map((word) => ({
-    ...word,
-    chars: Array.from(word.text).map((char) => ({ char, index: index++ })),
-  }));
-})();
-
-const HERO_STEPS = [
-  {
-    number: "01",
-    eyebrow: "Ossature",
-    title: "Montants & structure",
-    description: "Les cadres verticaux se placent en premier pour donner l'alignement et la stabilité du rayonnage.",
-    icon: "structure",
-  },
-  {
-    number: "02",
-    eyebrow: "Portance",
-    title: "Lisses porteuses",
-    description: "Les traverses rouges définissent les niveaux de charge, avec une lecture claire des hauteurs utiles.",
-    icon: "beams",
-  },
-  {
-    number: "03",
-    eyebrow: "Préparation",
-    title: "Palettes & supports",
-    description: "Les supports viennent compléter chaque niveau pour recevoir les palettes sans improvisation.",
-    icon: "pallets",
-  },
-  {
-    number: "04",
-    eyebrow: "Résultat final",
-    title: "Rayonnage opérationnel",
-    description: "La structure devient un système prêt à stocker: propre, lisible, sécurisé et adapté au flux.",
-    icon: "complete",
-  },
-] as const;
-
-type StepIconType = (typeof HERO_STEPS)[number]["icon"];
+const STEP_ICONS = ["structure", "beams", "pallets", "complete"] as const;
+type StepIconType = (typeof STEP_ICONS)[number];
 
 function StepIcon({ type }: { type: StepIconType }) {
   if (type === "structure") {
@@ -77,6 +37,34 @@ function StepIcon({ type }: { type: StepIconType }) {
 }
 
 export default function Hero() {
+  const t = useTranslations("hero");
+  const tn = useTranslations("nav");
+  const accentIndex = Number(t.raw("accentIndex"));
+
+  // Animate the title per word (each word is a single span). This reads cleaner
+  // than the per-letter scatter and works for Arabic too, where per-letter spans
+  // would break the cursive glyph joining.
+  const heroWords = useMemo(() => {
+    let index = 0;
+    return (t.raw("words") as string[]).map((text, wordIndex) => ({
+      text,
+      accent: wordIndex === accentIndex,
+      chars: [{ char: text, index: index++ }],
+    }));
+  }, [t, accentIndex]);
+
+  const heroSteps = useMemo(
+    () =>
+      (t.raw("steps") as Array<{ eyebrow: string; title: string; description: string }>).map((step, i) => ({
+        ...step,
+        number: String(i + 1).padStart(2, "0"),
+        icon: STEP_ICONS[i] ?? "complete",
+      })),
+    [t],
+  );
+
+  const title = heroWords.map((word) => word.text).join(" ");
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const heroRef = useRef<HTMLElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
@@ -92,6 +80,8 @@ export default function Hero() {
     const canvas = canvasRef.current;
     const heroEl = heroRef.current;
     if (!canvas || !heroEl) return;
+
+    const stepCount = STEP_ICONS.length;
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     const applyRendererQuality = () => {
@@ -324,8 +314,8 @@ export default function Hero() {
         stepsRef.current.style.opacity = String(stepsIn);
         stepsRef.current.style.transform = `translate3d(0, ${(1 - stepsIn) * 24}px, 0)`;
       }
-      const stepFloat = sceneP * HERO_STEPS.length;
-      const stepIndex = Math.min(HERO_STEPS.length - 1, Math.floor(stepFloat));
+      const stepFloat = sceneP * stepCount;
+      const stepIndex = Math.min(stepCount - 1, Math.floor(stepFloat));
       const stepLocal = clamp01(stepFloat - stepIndex);
       if (activeStepRef.current !== stepIndex) {
         activeStepRef.current = stepIndex;
@@ -412,14 +402,14 @@ export default function Hero() {
             style={{ willChange: "opacity, transform, filter" }}
           >
             <div className="relative max-w-[1180px]">
-              <p className="mb-6 text-[12px] font-bold uppercase tracking-[.42em] text-orange sm:text-[13px]">
-                OMAK RAYONNAGE
+              <p className="mb-5 text-[11px] font-bold uppercase tracking-[.36em] text-orange sm:mb-6 sm:text-[13px] sm:tracking-[.42em]">
+                {t("eyebrow")}
               </p>
               <h1
-                aria-label="L'ingénierie du stockage."
-                className="flex flex-wrap items-baseline justify-center gap-x-[.28em] gap-y-2 font-nb text-[40px] font-extrabold leading-[.92] text-white sm:text-[58px] md:flex-nowrap md:text-[72px] lg:text-[86px] xl:text-[96px]"
+                aria-label={title}
+                className="flex flex-wrap items-baseline justify-center gap-x-[.24em] gap-y-2 font-nb text-[46px] font-extrabold leading-[.9] text-white sm:gap-x-[.28em] sm:text-[58px] sm:leading-[.92] md:flex-nowrap md:text-[72px] lg:text-[86px] xl:text-[96px]"
               >
-                {HERO_WORDS.map((word) => (
+                {heroWords.map((word) => (
                   <span
                     key={word.text}
                     className={`inline-flex whitespace-nowrap ${word.accent ? "text-orange" : "text-white"}`}
@@ -439,9 +429,15 @@ export default function Hero() {
                   </span>
                 ))}
               </h1>
-              <p className="mx-auto mt-7 max-w-[760px] text-[13px] font-bold uppercase tracking-[.18em] text-white/66 sm:text-[14px]">
-                Partenaire STOW · Distributeur exclusif MANORGA · Casablanca
+              <p className="mx-auto mt-6 max-w-[330px] text-[10px] font-bold uppercase leading-[1.55] tracking-[.15em] text-white/62 sm:mt-7 sm:max-w-[760px] sm:text-[14px] sm:leading-normal sm:tracking-[.18em]">
+                {t("subtitle")}
               </p>
+              <Link
+                href="/contact"
+                className="pointer-events-auto mt-6 inline-flex items-center justify-center rounded-full bg-orange px-5 py-3 text-[13px] font-bold text-white shadow-[0_10px_26px_rgba(245,130,32,.35)] transition-colors hover:bg-orangedark sm:hidden"
+              >
+                {tn("quote")} →
+              </Link>
             </div>
           </div>
 
@@ -452,13 +448,13 @@ export default function Hero() {
           >
             <div className="hero-step-panel hero-step-dock">
               <div className="hero-step-kicker">
-                <span className="text-[11px] font-bold uppercase tracking-[.26em] text-orange">Montage en direct</span>
+                <span className="text-[11px] font-bold uppercase tracking-[.26em] text-orange">{t("liveBadge")}</span>
                 <span className="rounded-full border border-white/12 px-3 py-1 text-[10px] font-bold uppercase tracking-[.18em] text-white/58">
-                  3D guide
+                  {t("guideBadge")}
                 </span>
               </div>
               <div className="hero-step-grid">
-                {HERO_STEPS.map((step, index) => (
+                {heroSteps.map((step, index) => (
                   <div
                     key={step.number}
                     className={`hero-step ${index === activeStepIndex ? "is-active" : ""} ${
@@ -495,7 +491,7 @@ export default function Hero() {
             className="pointer-events-none absolute inset-x-0 bottom-8 z-10 flex flex-col items-center gap-2 text-[11px] font-bold uppercase tracking-[.34em] text-white/70"
             style={{ willChange: "opacity, transform" }}
           >
-            Scroll
+            {t("scroll")}
             <span className="h-2 w-2 rotate-45 border-b-2 border-r-2 border-white/70" />
           </div>
         </div>

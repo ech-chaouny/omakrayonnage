@@ -1,0 +1,845 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "services": "Services",
+    "contact": "Contact",
+    "quote": "Request a quote",
+    "productsMenu": {
+      "eyebrow": "OMAK range",
+      "subtitle": "Choose the racking that fits your flow.",
+      "all": "View all"
+    },
+    "servicesMenu": {
+      "eyebrow": "Support",
+      "subtitle": "From study to after-sales service.",
+      "all": "View all"
+    }
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN",
+    "ar": "AR"
+  },
+  "hero": {
+    "eyebrow": "OMAK RAYONNAGE",
+    "words": ["Storage", "engineered", "right."],
+    "accentIndex": 2,
+    "subtitle": "STOW Partner · Exclusive MANORGA Distributor · Casablanca",
+    "liveBadge": "Live assembly",
+    "guideBadge": "3D guide",
+    "scroll": "Scroll",
+    "steps": [
+      {
+        "eyebrow": "Frame",
+        "title": "Uprights & structure",
+        "description": "The vertical frames go up first to set the alignment and stability of the racking."
+      },
+      {
+        "eyebrow": "Load capacity",
+        "title": "Load beams",
+        "description": "The red beams define the load levels, with a clear read of the usable heights."
+      },
+      {
+        "eyebrow": "Preparation",
+        "title": "Pallets & supports",
+        "description": "Supports complete each level to receive the pallets without improvisation."
+      },
+      {
+        "eyebrow": "Final result",
+        "title": "Racking in service",
+        "description": "The structure becomes a system ready to store: clean, clear, safe and matched to the flow."
+      }
+    ]
+  },
+  "stats": {
+    "eyebrow": "Key figures",
+    "title": "A solid base from the start.",
+    "intro": "Three quick markers before diving into the partners, the solutions and the OMAK method.",
+    "items": [
+      {
+        "label": "Companies equipped",
+        "text": "Industrial sites supported across Morocco, from study to assembly."
+      },
+      {
+        "label": "European partners",
+        "text": "STOW and MANORGA to cover heavy, light and platform systems."
+      },
+      {
+        "label": "Steps mastered",
+        "text": "Audit, survey, 3D design, manufacturing, installation, inspection and after-sales."
+      }
+    ]
+  },
+  "iso": {
+    "eyebrow": "Quality certification",
+    "badge": "Controlled organization",
+    "intro": "This certification shows that OMAK works with a structured quality system: needs are framed, steps are followed, and installations are inspected before delivery.",
+    "points": [
+      ["01", "Tracked process", "A clear method from the need to the final inspection."],
+      ["02", "Consistent quality", "Documented steps to keep the same level of requirement."],
+      ["03", "Client trust", "A serious foundation for durable, safe installations."]
+    ]
+  },
+  "partners": {
+    "eyebrow": "Partners",
+    "title": "Two European references.",
+    "intro": "OMAK MOROCCO combines its on-the-ground presence in Casablanca with the know-how of certified European manufacturers: the right brand, the right system, and an installation controlled end to end.",
+    "allianceEyebrow": "European alliance",
+    "allianceSubtitle": "Two manufacturers, one local execution.",
+    "selection": "OMAK MOROCCO selection",
+    "list": {
+      "stow": {
+        "role": "Heavy systems partner",
+        "origin": "Belgium",
+        "text": "European leader in storage and racking for heavy systems: pallet racking, drive-in, dynamic storage, pallet shuttle, mobile, AS/RS, silo, cantilever and mezzanines.",
+        "items": ["Pallet racking", "High bay", "EN/FEM standards"]
+      },
+      "manorga": {
+        "role": "Exclusive distributor",
+        "origin": "France",
+        "text": "French manufacturer for over 50 years for light, medium and heavy racking, platforms, industrial partitions, handling and safety.",
+        "items": ["Made in France", "Custom built", "Co-design"]
+      }
+    },
+    "strengths": [
+      ["01", "Heavy systems", "STOW for high-load, high-bay installations with intensive flows."],
+      ["02", "Complete racking", "MANORGA for light, medium, platform and technical-zone needs."],
+      ["03", "Local integration", "OMAK handles the study, manufacturing, assembly, inspection and after-sales in Morocco."]
+    ]
+  },
+  "quote": {
+    "eyebrow": "Method",
+    "title": "From audit to commissioning.",
+    "intro": "One team, accountable end to end: study, 3D design, manufacturing, assembly, inspection and after-sales service.",
+    "steps": ["Audit & needs", "Survey & study", "3D design", "Manufacturing", "Installation", "Inspection & after-sales"]
+  },
+  "campaign": {
+    "eyebrow": "Why OMAK",
+    "title": "The partner you can trust.",
+    "intro": "Local expertise reinforced by two recognized European manufacturers, for safe, durable and compliant installations.",
+    "reasons": [
+      {
+        "title": "Certified quality",
+        "text": "European manufacturers compliant with EN/FEM standards and inspected installations."
+      },
+      {
+        "title": "Dual partnership",
+        "text": "STOW partner and exclusive MANORGA distributor: the right brand for every need."
+      },
+      {
+        "title": "Turnkey project",
+        "text": "Study, 3D design, manufacturing, assembly, inspection and after-sales by a single team."
+      },
+      {
+        "title": "Close to Morocco",
+        "text": "Local presence in Casablanca, responsiveness and on-site support."
+      }
+    ]
+  },
+  "homeProducts": {
+    "eyebrow": "Integrated storage solutions",
+    "titleLead": "Our",
+    "titleAccent": "Solutions",
+    "intro": "A full range, but a simple approach: pick the structure that truly serves your flow.",
+    "methodEyebrow": "OMAK method",
+    "methodText": "Study, sizing, installation and inspection: every solution follows the loads, the heights and the real flow.",
+    "navAriaLabel": "Solutions navigation",
+    "viewSolution": "View the solution"
+  },
+  "clients": {
+    "eyebrow": "Trusted on the ground",
+    "title": "+90 companies supported.",
+    "intro": "Industrial, logistics and retail references that trust their storage spaces to OMAK RAYONNAGE.",
+    "badge": "Client logos",
+    "referencesSuffix": "references",
+    "logoAlt": "OMAK client logo {index}",
+    "rings": [
+      {
+        "title": "Industry",
+        "text": "Production sites, technical parts and steady flows."
+      },
+      {
+        "title": "Logistics",
+        "text": "Warehouses, distribution, heavy storage and order preparation."
+      },
+      {
+        "title": "Retail",
+        "text": "Stores, back rooms, platforms and high-rotation spaces."
+      },
+      {
+        "title": "Pharma & services",
+        "text": "Controlled zones, offices, safety and long-term support."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Project",
+    "titleLead": "Let's optimize your",
+    "titleAccent": "warehouse",
+    "intro": "From study to after-sales service — one team, accountable end to end.",
+    "quote": "Request a quote",
+    "phone": "06 62 50 02 31"
+  },
+  "values": {
+    "eyebrow": "Our commitments",
+    "title": "Safety. Experience. Quality.",
+    "intro": "Three requirements, on every installation.",
+    "items": [
+      { "title": "Safety", "text": "The safety of people and stored goods, on every installation." },
+      { "title": "Experience", "text": "The OMAK team (study, solutions, assembly) and its European manufacturers compliant with EN/FEM standards." },
+      { "title": "Quality", "text": "Standing out through the excellence of products and installations, standards respected." }
+    ]
+  },
+  "footer": {
+    "tagline": "Storage engineering — from study to after-sales service, everywhere in Morocco.",
+    "cols": {
+      "solutions": {
+        "heading": "Solutions",
+        "items": ["Heavy racking", "Semi-heavy & light", "Cantilever", "Platforms", "Protection & safety"]
+      },
+      "services": {
+        "heading": "Services",
+        "items": ["Study & design", "Installation & assembly", "Installation inspection", "After-sales service"]
+      },
+      "contact": {
+        "heading": "Contact",
+        "items": [
+          "Bd Attaka, Casablanca 22580",
+          "Management: 06 61 51 27 58",
+          "Administration: 06 61 91 43 24",
+          "Sales: 06 62 50 02 31",
+          "omakrayonnage.com"
+        ]
+      }
+    },
+    "copyright": "Copyright © 2026 OMAK RAYONNAGE. All rights reserved."
+  },
+  "productsPage": {
+    "hero": {
+      "eyebrow": "Solutions",
+      "title": "Choose the right racking.",
+      "intro": "A clear range for every use: heavy pallets, picking, long loads, platforms, safety and accessories. Each page explains the role, the advantages and the type of project it fits."
+    },
+    "cardDetails": "Details",
+    "cta": {
+      "eyebrow": "Custom project",
+      "title": "Need technical advice before choosing?",
+      "quote": "Request a quote"
+    }
+  },
+  "productDetail": {
+    "back": "All products",
+    "quote": "Request a quote",
+    "viewRange": "View the range",
+    "manufacturer": "Manufacturer / range",
+    "usage": {
+      "eyebrow": "Use",
+      "title": "For which needs?"
+    },
+    "advantages": {
+      "eyebrow": "Advantages",
+      "title": "What the solution brings."
+    },
+    "details": {
+      "eyebrow": "Details",
+      "title": "Quick sheet."
+    },
+    "method": {
+      "eyebrow": "OMAK method",
+      "title": "From study to assembly."
+    },
+    "compare": {
+      "eyebrow": "To compare",
+      "title": "Other solutions.",
+      "catalog": "Full catalogue"
+    },
+    "cta": {
+      "eyebrow": "Project",
+      "title": "Want to validate this solution for your site?",
+      "quote": "Request a study"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "A method for every project.",
+      "intro": "OMAK services are not a showcase. They are the path that turns a storage need into a clear installation: study, assembly, inspection and follow-up.",
+      "cta": "Frame my project",
+      "badge": "4 key services"
+    },
+    "journey": {
+      "eyebrow": "OMAK journey",
+      "view": "View"
+    },
+    "workflow": {
+      "eyebrow": "Workflow",
+      "title": "The service follows the site.",
+      "intro": "Each service answers a precise step. The read stays simple: what goes in, what comes out, and what your team gains on the ground."
+    },
+    "benchmarks": {
+      "eyebrow": "Benchmarks",
+      "title": "Figures that frame the service.",
+      "intro": "These benchmarks give the level of experience, the references and the field method before choosing the right service.",
+      "cards": [
+        {
+          "value": "+90",
+          "label": "Companies equipped",
+          "text": "Industrial sites supported across Morocco, from study to assembly."
+        },
+        {
+          "value": "2",
+          "label": "European partners",
+          "text": "STOW and MANORGA to cover heavy, light and platform systems."
+        },
+        {
+          "value": "6",
+          "label": "Steps mastered",
+          "text": "Audit, survey, design, manufacturing, installation, inspection and after-sales."
+        }
+      ]
+    },
+    "method": {
+      "points": [
+        ["01", "Framing", "Need, measurements, loads, constraints and operating objective."],
+        ["02", "Decision", "Technical choice, budget, schedule and on-site organization."],
+        ["03", "Execution", "Assembly, inspection, handover and follow-up after commissioning."]
+      ]
+    },
+    "cta": {
+      "eyebrow": "Your project",
+      "title": "We pick the right service for your need.",
+      "talk": "Talk to the team"
+    }
+  },
+  "serviceDetail": {
+    "back": "All services",
+    "brief": "Service brief",
+    "method": {
+      "eyebrow": "Method",
+      "title": "This service moves in 3 steps."
+    },
+    "aside": {
+      "eyebrow": "Service request",
+      "title": "Quick framing.",
+      "text": "Send dimensions, loads, photos and constraints. The team comes back with the right technical read.",
+      "cta": "Request this service"
+    },
+    "deliverables": {
+      "eyebrow": "Deliverables",
+      "title": "What comes out of the step."
+    },
+    "impact": {
+      "eyebrow": "Impact",
+      "title": "Why it's useful.",
+      "labels": ["Clear decision", "Optimized flow", "Reduced risk", "On-site follow-up"],
+      "fallback": "On-site impact"
+    },
+    "continuity": {
+      "eyebrow": "Continuity",
+      "title": "The other steps of the journey.",
+      "all": "All services"
+    },
+    "cta": {
+      "eyebrow": "Project",
+      "title": "Shall we prepare this step for your warehouse?",
+      "quote": "Request a quote"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About us",
+      "title": "The local expertise in industrial storage.",
+      "intro": "OMAK RAYONNAGE supports companies in Morocco with the sale, study and installation of metal racking systems, from the initial need to after-sales service.",
+      "badge": "Casablanca",
+      "badgeText": "Study, assembly, inspection and after-sales",
+      "imageAlt": "OMAK RAYONNAGE team in an equipped warehouse"
+    },
+    "figures": [
+      ["+90", "Companies equipped"],
+      ["2", "European partners"],
+      ["6", "Steps mastered"],
+      ["ISO", "Certified quality"]
+    ],
+    "interlocutor": {
+      "eyebrow": "OMAK Morocco",
+      "title": "A single point of contact.",
+      "lead": "We offer a wide range of products and services for warehouses, stores, workshops and offices: metal racking, platforms, mezzanines, protections, accessories and custom solutions.",
+      "services": [
+        "Needs audit",
+        "Study & design",
+        "3D design",
+        "Installation & assembly",
+        "Installation inspection",
+        "Maintenance & after-sales"
+      ]
+    },
+    "ranges": {
+      "eyebrow": "Ranges",
+      "title": "Every constraint has its solution.",
+      "intro": "The right answer depends on the load, the flow, the height, the access and the future growth of the site.",
+      "items": [
+        {
+          "title": "Light range",
+          "text": "Fixed or mobile archive racking, small accessories, bins and detail parts."
+        },
+        {
+          "title": "Semi-heavy range",
+          "text": "Spare-parts racking, picking, tyres, cantilever for vertical loads and technical zones."
+        },
+        {
+          "title": "Heavy range",
+          "text": "Pallet racking, accumulation, dynamic racking and mobile pallet racking."
+        },
+        {
+          "title": "Special range",
+          "text": "Shuttles, platforms, mezzanines, silos and fully custom solutions."
+        }
+      ]
+    },
+    "method": {
+      "eyebrow": "Method",
+      "title": "A controlled project journey.",
+      "intro": "The goal is not just to sell equipment: you have to design a coherent, controllable and durable installation.",
+      "imageAlt": "Pallet racking installation"
+    },
+    "quality": {
+      "eyebrow": "Quality",
+      "title": "Execution visible on the ground.",
+      "items": [
+        {
+          "title": "Professional technical team",
+          "text": "Trained teams, used to field constraints, to secure every step of the project."
+        },
+        {
+          "title": "Lasting client relationship",
+          "text": "Advice, responsiveness and follow-up after installation to build lasting trust."
+        }
+      ]
+    },
+    "partners": {
+      "eyebrow": "Partners",
+      "title": "Two European references.",
+      "intro": "STOW and MANORGA let OMAK cover heavy, light, platform and accessory needs with local execution in Morocco.",
+      "list": {
+        "stow": {
+          "role": "Heavy systems partner",
+          "text": "Pallet racking, high bay, accumulation, shuttles, dynamic storage and heavy cantilever."
+        },
+        "manorga": {
+          "role": "Exclusive distributor",
+          "text": "Light and medium racking, platforms, mesh partitions, accessories and safety."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Project",
+      "title": "Discover the smart choice for your installation.",
+      "intro": "Let's talk about your site, your loads, your flows and the best technical approach.",
+      "quote": "Request a quote",
+      "phone": "06 62 50 02 31"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "A clear quote, a fast reply.",
+      "intro": "Share the dimensions, loads and constraints of your space. The OMAK team frames the study and guides you to the most suitable solution.",
+      "highlights": ["Free quote", "Technical study", "Fast reply"],
+      "fillForm": "Fill out the form",
+      "imageAlt": "Industrial racking project study",
+      "sideService": "Sales department",
+      "quickDirection": "Management",
+      "quickDirectionValue": "05 22 66 46 41",
+      "quickLocation": "Location",
+      "quickLocationValue": "Casablanca"
+    },
+    "form": {
+      "eyebrow": "Free quote",
+      "title": "Send us your need.",
+      "duration": "2 min",
+      "fields": {
+        "name": "Full name",
+        "phone": "Phone",
+        "email": "Email",
+        "company": "Company name",
+        "city": "City"
+      },
+      "needTypeLabel": "Type of need",
+      "needs": ["Heavy racking", "Semi-heavy / light", "Cantilever", "Platform", "Safety", "After-sales"],
+      "messagePlaceholder": "Your need: dimensions, loads, area, desired deadline...",
+      "submit": "Send the request"
+    },
+    "coords": {
+      "eyebrow": "Contact details",
+      "title": "Reach the right department.",
+      "localTeam": "Local team",
+      "featuredEyebrow": "Quote priority",
+      "featuredBadge": "Fast reply",
+      "featuredText": "For a quote, a technical visit or an urgent racking need."
+    },
+    "departments": {
+      "direction": "Management",
+      "admin": "Administrative department",
+      "commercial": "Sales department",
+      "technical": "Technical department",
+      "general": "General contact"
+    },
+    "map": {
+      "eyebrow": "Location",
+      "title": "Find OMAK in Casablanca.",
+      "address": "Bd Attaka, Casablanca 22580",
+      "country": "Morocco",
+      "directions": "Directions",
+      "call": "Call",
+      "cardTitle": "OMAK Service",
+      "cardAddress": "Bd Attaka, Casablanca 22580",
+      "iframeTitle": "OMAK RAYONNAGE Casablanca map"
+    }
+  },
+  "catalog": {
+    "products": {
+      "rayonnage-lourd": {
+        "title": "Heavy racking",
+        "navTitle": "Heavy racking",
+        "caption": "Pallet racking, high bay, heavy loads.",
+        "eyebrow": "Pallet storage",
+        "headline": "The structure built for heavy loads.",
+        "intro": "A robust solution to organize pallets, secure aisles and make use of the available height in industrial warehouses.",
+        "stats": [["Use", "Pallets"], ["Structure", "Certified steel"], ["Project", "Custom built"]],
+        "uses": [
+          "Logistics warehouses and distribution platforms",
+          "High-bay storage zones",
+          "Industrial back stock with steady flow",
+          "Storage of uniform or multi-reference pallets"
+        ],
+        "advantages": [
+          "Clear read of locations and direct access to pallets",
+          "Structure sized to the loads and the usable height",
+          "Compatible with protections, mesh, guards and safety accessories",
+          "Controlled assembly for durable operation"
+        ],
+        "specs": [
+          ["Type", "Heavy pallet racking"],
+          ["Brands", "STOW / MANORGA"],
+          ["Fit for", "Heavy loads"],
+          ["Options", "Protections, supports, signage"]
+        ],
+        "steps": [
+          ["Technical survey", "Dimensions, clear height, loads and forklift flow."],
+          ["Sizing", "Choice of uprights, beams, levels and protections."],
+          ["Installation", "Assembly, alignment, inspection and commissioning."]
+        ]
+      },
+      "semi-lourd-leger": {
+        "title": "Semi-heavy & light racking",
+        "navTitle": "Semi-heavy / light",
+        "caption": "Boxes, bins, picking and archives.",
+        "eyebrow": "Picking & back stock",
+        "headline": "Smooth organization for small and medium loads.",
+        "intro": "Ideal for boxes, bins, spare parts, archives and preparation zones where readability matters as much as capacity.",
+        "stats": [["Use", "Picking"], ["Load", "Light to medium"], ["Assembly", "Scalable"]],
+        "uses": [
+          "Spare-parts stores",
+          "Archives, back stock and workshops",
+          "Manual order preparation",
+          "Storage of boxes and plastic bins"
+        ],
+        "advantages": [
+          "Adjustable levels to suit the references",
+          "Simple access without heavy equipment",
+          "Easy extension as stock evolves",
+          "Clean finish for technical or retail zones"
+        ],
+        "specs": [
+          ["Type", "Light / semi-heavy racking"],
+          ["Brand", "MANORGA"],
+          ["Fit for", "Boxes, bins, accessories"],
+          ["Options", "Shelves, dividers, backs, doors"]
+        ],
+        "steps": [
+          ["Classification", "Analysis of references, volumes and rotations."],
+          ["Layout", "Definition of aisles, heights and levels."],
+          ["Setup", "Clean assembly, labelling and shelf adjustment."]
+        ]
+      },
+      "cantilever": {
+        "title": "Cantilever",
+        "navTitle": "Cantilever",
+        "caption": "Tubes, profiles, panels and long loads.",
+        "eyebrow": "Long loads",
+        "headline": "Store lengths without losing safety.",
+        "intro": "Cantilever frees up frontal access for long or bulky loads: tubes, timber, panels, profiles, bars and industrial materials.",
+        "stats": [["Use", "Lengths"], ["Access", "Frontal"], ["Config.", "Single or double sided"]],
+        "uses": [
+          "Tubes, metal profiles and long bars",
+          "Timber panels, sheets and flat materials",
+          "Material depots and production workshops",
+          "Outdoor or covered zones as needed"
+        ],
+        "advantages": [
+          "Arms sized to the length and weight of the loads",
+          "Fast access for forklift or suitable handling",
+          "Vertically clear and secure storage",
+          "Scalable configurations by level and bay"
+        ],
+        "specs": [
+          ["Type", "Industrial cantilever"],
+          ["Brand", "STOW"],
+          ["Fit for", "Long loads"],
+          ["Options", "Stops, arms, protections, roofing"]
+        ],
+        "steps": [
+          ["Load analysis", "Length, weight, loading method and rotation."],
+          ["Structure calculation", "Choice of columns, arms and spacing."],
+          ["Controlled install", "Anchoring, alignment and stability check."]
+        ]
+      },
+      "plateformes-stockage": {
+        "title": "Storage platforms",
+        "navTitle": "Storage platforms",
+        "caption": "Mezzanines and extra floor space.",
+        "eyebrow": "Space gain",
+        "headline": "Create usable floor space without moving.",
+        "intro": "Platforms and mezzanines turn available height into usable floor space to store, prepare, circulate or set up a technical zone.",
+        "stats": [["Goal", "Space +"], ["Use", "Storage / workshop"], ["Study", "Load & flow"]],
+        "uses": [
+          "Creating an extra storage level",
+          "Picking, workshop or back-stock zones",
+          "Industrial mezzanines with stairs and guardrails",
+          "Optimizing saturated warehouses"
+        ],
+        "advantages": [
+          "Uses available height without major building work",
+          "Structure designed to the operating loads",
+          "Integration of stairs, guardrails and pallet access",
+          "Ability to phase the project to the budget"
+        ],
+        "specs": [
+          ["Type", "Platform / mezzanine"],
+          ["Brands", "STOW / MANORGA"],
+          ["Fit for", "Space gain"],
+          ["Options", "Stairs, guardrails, floors, gates"]
+        ],
+        "steps": [
+          ["Site survey", "Height, columns, access, circulation and constraints."],
+          ["Design", "Layout plan, loads and access safety."],
+          ["Assembly", "Structure, floor, guardrails and handover."]
+        ]
+      },
+      "protection-securite": {
+        "title": "Protection & safety",
+        "navTitle": "Protection & safety",
+        "caption": "Rack, post and aisle protections.",
+        "eyebrow": "Securing",
+        "headline": "Protect installations before the incident.",
+        "intro": "A reliable installation also relies on protections: guards, upright protectors, barriers, stops, signage and separation elements.",
+        "stats": [["Role", "Prevention"], ["Zones", "Aisles & feet"], ["Impact", "Fewer stoppages"]],
+        "uses": [
+          "Protection of racking uprights",
+          "Separation of pedestrian and forklift zones",
+          "Securing corners, aisles and sensitive zones",
+          "Upgrading existing installations"
+        ],
+        "advantages": [
+          "Reduces risks linked to handling impacts",
+          "Makes circulation zones clearer",
+          "Protects the racking investment over time",
+          "Fits new or existing installations"
+        ],
+        "specs": [
+          ["Type", "Rack & circulation protection"],
+          ["Brand", "MANORGA"],
+          ["Fit for", "Operating safety"],
+          ["Options", "Guards, barriers, stops, marking"]
+        ],
+        "steps": [
+          ["Diagnosis", "Spotting risk zones and forklift flows."],
+          ["Selection", "Choice of protections by impact and use."],
+          ["Install", "Fixing, alignment and final visual check."]
+        ]
+      },
+      "accessoires-manutention": {
+        "title": "Accessories & handling",
+        "navTitle": "Accessories & handling",
+        "caption": "Supports, mesh, dividers and parts.",
+        "eyebrow": "Add-ons",
+        "headline": "The right accessories make storage clearer.",
+        "intro": "Supports, mesh, decking, dividers, bins, shelves and finishing parts complete the racking to fit the real site.",
+        "stats": [["Role", "Adapt"], ["Use", "Finishing"], ["Service", "After-sales & parts"]],
+        "uses": [
+          "Adapting racking to specific pallets or parcels",
+          "Separating references and holding loads",
+          "Safety and finishing add-ons",
+          "Replacing or adding parts on existing installations"
+        ],
+        "advantages": [
+          "Improves order and the read of locations",
+          "Lets you adapt a structure without replacing it all",
+          "Makes daily operation easier for teams",
+          "Available for new projects or maintenance"
+        ],
+        "specs": [
+          ["Type", "Racking accessories"],
+          ["Brand", "MANORGA"],
+          ["Fit for", "Optimization & maintenance"],
+          ["Options", "Mesh, supports, dividers, shelves"]
+        ],
+        "steps": [
+          ["Need", "Identify the references, formats and constraints."],
+          ["Compatibility", "Check dimensions, loads and existing structure."],
+          ["Integration", "Add the accessories and check in use."]
+        ]
+      }
+    },
+    "services": {
+      "etude-conception": {
+        "title": "Study & design",
+        "navTitle": "Study and design",
+        "eyebrow": "Design office",
+        "caption": "Needs analysis, layout and technical choice.",
+        "headline": "A clear design before every installation.",
+        "intro": "OMAK frames your need from the start: dimensions, loads, flows, building constraints and operating goals. The study lets you choose the right structure before launching the assembly.",
+        "stats": [["Input", "Client need"], ["Output", "Framed solution"], ["Goal", "Controlled budget"]],
+        "deliverables": [
+          "Analysis of dimensions, loads and usable heights",
+          "Recommendation of the suitable racking type",
+          "Layout plan and circulation logic",
+          "Clear pricing with useful options"
+        ],
+        "advantages": [
+          "Avoids oversizing or the wrong structure choice",
+          "Gives a clear read of the project before approval",
+          "Optimizes capacity without blocking handling flows",
+          "Prepares a faster and cleaner assembly"
+        ],
+        "process": [
+          ["Survey", "Collecting field constraints, photos, areas and flows."],
+          ["Design", "Technical choice, levels, aisles, access and safety."],
+          ["Approval", "Quote, plan and possible variants within budget."]
+        ]
+      },
+      "installation-montage": {
+        "title": "Installation & assembly",
+        "navTitle": "Installation and assembly",
+        "eyebrow": "Field execution",
+        "caption": "Assembly, alignment, anchoring and commissioning.",
+        "headline": "A clean, clear and safe assembly.",
+        "intro": "Our teams organize the on-site assembly with a clear method: material receipt, layout, assembly, alignment, anchoring and checking before operation.",
+        "stats": [["Field", "OMAK team"], ["Control", "Alignment"], ["End", "Commissioning"]],
+        "deliverables": [
+          "Organization of the intervention and assembly zones",
+          "Assembly of uprights, beams, shelves or platforms",
+          "Anchoring, adjustments and visual check",
+          "Delivery of an installation ready to operate"
+        ],
+        "advantages": [
+          "Reduces installation errors and site rework",
+          "Guarantees an installation consistent with the approved plan",
+          "Improves safety from the first day of use",
+          "Limits the impact on the client's activity"
+        ],
+        "process": [
+          ["Preparation", "Schedule, material receipt and zone marking."],
+          ["Assembly", "Step-by-step assembly with level checks."],
+          ["Handover", "Checking, visual cleanup and commissioning."]
+        ]
+      },
+      "controle-installations": {
+        "title": "Installation inspection",
+        "navTitle": "Installation inspection",
+        "eyebrow": "Safety & compliance",
+        "caption": "Inspection, risk points and recommendations.",
+        "headline": "Inspect to operate with confidence.",
+        "intro": "Inspection helps identify visible risks: impacts, deformations, missing protections, anchoring, aisle readability and the general state of the structures.",
+        "stats": [["Goal", "Prevention"], ["Focus", "Safety"], ["Result", "Action plan"]],
+        "deliverables": [
+          "Visual inspection of structures and protections",
+          "Identification of sensitive or damaged zones",
+          "Recommendations for repair or reinforcement",
+          "Prioritization of actions by risk"
+        ],
+        "advantages": [
+          "Reduces interruptions linked to storage incidents",
+          "Helps keep an installation clean and operable",
+          "Protects teams, loads and equipment",
+          "Gives a clear view of the actions to plan"
+        ],
+        "process": [
+          ["Visit", "Walkthrough of zones, aisles, uprights and protections."],
+          ["Diagnosis", "Spotting anomalies and prioritizing."],
+          ["Action", "Proposal for correction, replacement or addition."]
+        ]
+      },
+      "service-apres-vente": {
+        "title": "After-sales service",
+        "navTitle": "After-sales service",
+        "eyebrow": "Support",
+        "caption": "Maintenance, parts, adjustments and growth.",
+        "headline": "Useful follow-up after commissioning.",
+        "intro": "After installation, OMAK supports the growth of your storage: adding levels, replacing parts, protections, adapting to new flows and corrective interventions.",
+        "stats": [["Support", "Local"], ["Need", "Parts & follow-up"], ["Duration", "Long-term relationship"]],
+        "deliverables": [
+          "Adding or replacing racking accessories",
+          "Intervention on damaged elements",
+          "Adapting the installation to new needs",
+          "Technical advice for future extensions"
+        ],
+        "advantages": [
+          "Extends the lifespan of installations",
+          "Lets you adapt storage without starting over",
+          "Ensures a local contact for urgent needs",
+          "Makes maintenance and business continuity easier"
+        ],
+        "process": [
+          ["Request", "Identifying the need or the problem encountered."],
+          ["Solution", "Choice of parts, accessories or suitable correction."],
+          ["Follow-up", "Intervention, inspection and advice for what's next."]
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "OMAK RAYONNAGE — Industrial storage solutions in Casablanca",
+      "description": "OMAK RAYONNAGE designs, manufactures and installs every type of industrial racking in Morocco. STOW partner and exclusive MANORGA distributor.",
+      "ogTitle": "OMAK RAYONNAGE — STOW partner & exclusive MANORGA distributor",
+      "ogDescription": "Industrial storage and racking solutions in Morocco, from study to after-sales, with certified European manufacturers.",
+      "ogImageAlt": "OMAK RAYONNAGE team",
+      "keywords": [
+        "racking Morocco",
+        "industrial racking Casablanca",
+        "pallet racking",
+        "cantilever",
+        "industrial mezzanine",
+        "storage solutions",
+        "OMAK RAYONNAGE"
+      ]
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Discover OMAK RAYONNAGE: industrial racking specialist in Morocco, STOW partner, exclusive MANORGA distributor, from study to assembly."
+    },
+    "products": {
+      "title": "Products",
+      "description": "Discover OMAK RAYONNAGE solutions: heavy racking, semi-heavy, cantilever, platforms, protections and accessories."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Discover OMAK RAYONNAGE services: study and design, installation, installation inspection and after-sales service."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact OMAK RAYONNAGE for a study, a free quote or technical support in industrial racking in Morocco."
+    },
+    "productDetail": {
+      "descriptionPrefix": "by OMAK RAYONNAGE",
+      "fallback": "Product"
+    },
+    "serviceDetail": {
+      "fallback": "Service"
+    }
+  }
+}

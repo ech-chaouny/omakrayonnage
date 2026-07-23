@@ -1,25 +1,24 @@
+import { useTranslations } from "next-intl";
 import Reveal from "./Reveal";
 
-const steps = ["Audit & besoins", "Relevé & étude", "Conception 3D", "Fabrication", "Installation", "Contrôle & SAV"];
-
 export default function Quote() {
+  const t = useTranslations("quote");
+  const steps = t.raw("steps") as string[];
+
   return (
     <section id="apropos" className="px-[max(22px,4vw)] py-24 md:py-32">
       <div className="mx-auto grid max-w-[1240px] items-center gap-12 md:grid-cols-[.9fr_1.1fr]">
         <div>
           <Reveal>
-            <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">Méthode</p>
+            <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("eyebrow")}</p>
           </Reveal>
           <Reveal>
             <h2 className="mt-5 max-w-[12ch] text-[clamp(36px,5vw,72px)] font-semibold leading-[.98] tracking-[-.03em] text-ink">
-              De l&apos;audit à la mise en service.
+              {t("title")}
             </h2>
           </Reveal>
           <Reveal>
-            <p className="mt-6 max-w-[48ch] text-[17px] font-medium leading-[1.65] text-ink2">
-              Une seule équipe, responsable de bout en bout: étude, conception 3D, fabrication, montage, contrôle et
-              service après-vente.
-            </p>
+            <p className="mt-6 max-w-[48ch] text-[17px] font-medium leading-[1.65] text-ink2">{t("intro")}</p>
           </Reveal>
           <Reveal>
             <div className="mt-8 grid max-w-[560px] gap-3 text-[14px] font-semibold text-ink sm:grid-cols-2">
@@ -36,7 +35,7 @@ export default function Quote() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/img/about-team-clean.png"
-            alt="Équipe OMAK RAYONNAGE en contrôle d'installation"
+            alt="OMAK RAYONNAGE"
             className="h-full w-full object-cover"
           />
         </Reveal>

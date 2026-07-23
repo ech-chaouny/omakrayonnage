@@ -1,3 +1,4 @@
+import { setRequestLocale } from "next-intl/server";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
@@ -10,7 +11,14 @@ import Clients from "@/components/Clients";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Nav />

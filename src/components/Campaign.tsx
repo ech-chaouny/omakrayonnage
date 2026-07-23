@@ -1,43 +1,25 @@
+import { useTranslations } from "next-intl";
 import Reveal from "./Reveal";
 
-const reasons = [
-  {
-    title: "Qualité certifiée",
-    text: "Fabricants européens conformes aux normes EN/FEM et installations contrôlées.",
-  },
-  {
-    title: "Double partenariat",
-    text: "Partenaire STOW et distributeur exclusif MANORGA: la bonne marque pour chaque besoin.",
-  },
-  {
-    title: "Projet clé en main",
-    text: "Étude, conception 3D, fabrication, montage, contrôle et SAV par une seule équipe.",
-  },
-  {
-    title: "Proximité Maroc",
-    text: "Présence locale à Casablanca, réactivité et accompagnement terrain.",
-  },
-];
-
 export default function Campaign() {
+  const t = useTranslations("campaign");
+  const reasons = t.raw("reasons") as Array<{ title: string; text: string }>;
+
   return (
     <section id="pourquoi" className="px-[max(22px,4vw)] py-10">
       <div className="omak-dark-pattern mx-auto max-w-[1240px] overflow-hidden rounded-[34px] px-[max(24px,4vw)] py-[clamp(48px,7vw,84px)] shadow-[0_24px_90px_rgba(17,19,21,.12)]">
         <div className="grid gap-10 md:grid-cols-[.75fr_1.25fr]">
           <div className="text-white">
             <Reveal>
-              <div className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">Pourquoi OMAK</div>
+              <div className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("eyebrow")}</div>
             </Reveal>
             <Reveal>
               <h2 className="mt-5 max-w-[10ch] text-[clamp(34px,5vw,70px)] font-semibold leading-[.98] tracking-[-.03em]">
-                Le partenaire de confiance.
+                {t("title")}
               </h2>
             </Reveal>
             <Reveal>
-              <p className="mt-6 max-w-[42ch] text-[16px] font-medium leading-[1.65] text-white/64">
-                Une expertise locale renforcée par deux fabricants européens reconnus, pour des installations sûres,
-                durables et conformes.
-              </p>
+              <p className="mt-6 max-w-[42ch] text-[16px] font-medium leading-[1.65] text-white/64">{t("intro")}</p>
             </Reveal>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">

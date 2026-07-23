@@ -1,40 +1,31 @@
+import { useTranslations } from "next-intl";
 import Logo from "./Logo";
 
-const cols = [
-  { h: "Solutions", items: ["Rayonnage lourd", "Semi-lourd & léger", "Cantilever", "Plateformes", "Protection & sécurité"] },
-  { h: "Services", items: ["Étude & conception", "Installation & montage", "Contrôle des installations", "Service après-vente"] },
-  {
-    h: "Contact",
-    items: [
-      "Bd Attaka, Casablanca 22580",
-      "Direction : 06 61 51 27 58",
-      "Administration : 06 61 91 43 24",
-      "Commercial : 06 62 50 02 31",
-      "omakrayonnage.com",
-    ],
-  },
-];
-
 export default function Footer() {
+  const t = useTranslations("footer");
+  const cols = [
+    { heading: t("cols.solutions.heading"), items: t.raw("cols.solutions.items") as string[] },
+    { heading: t("cols.services.heading"), items: t.raw("cols.services.items") as string[] },
+    { heading: t("cols.contact.heading"), items: t.raw("cols.contact.items") as string[] },
+  ];
+
   return (
     <footer
       id="contact"
-      className="omak-dark-pattern px-[max(22px,4vw)] pb-10 pt-20 text-[14px] leading-[1.6] text-white/62"
+      className="omak-dark-pattern px-[max(16px,4vw)] pb-8 pt-12 text-[13px] leading-[1.55] text-white/62 md:px-[max(22px,4vw)] md:pb-10 md:pt-20 md:text-[14px] md:leading-[1.6]"
     >
       <div className="mx-auto max-w-[1240px]">
-        <div className="grid grid-cols-1 gap-10 border-b border-white/12 pb-12 md:grid-cols-[1.6fr_1fr_1fr_1.3fr]">
+        <div className="grid grid-cols-1 gap-7 border-b border-white/12 pb-8 md:grid-cols-[1.6fr_1fr_1fr_1.3fr] md:gap-10 md:pb-12">
           <div>
-            <Logo light />
-            <p className="mt-6 max-w-[300px] text-white/58">
-              L&apos;ingénierie du stockage — de l&apos;étude au service après-vente, partout au Maroc.
-            </p>
+            <Logo light className="h-9 md:h-11" />
+            <p className="mt-4 max-w-[300px] text-white/58 md:mt-6">{t("tagline")}</p>
           </div>
           {cols.map((c) => (
-            <div key={c.h}>
-              <h5 className="mb-4 text-[12px] font-semibold uppercase tracking-[.16em] text-white">{c.h}</h5>
+            <div key={c.heading}>
+              <h5 className="mb-3 text-[11px] font-semibold uppercase tracking-[.15em] text-white md:mb-4 md:text-[12px] md:tracking-[.16em]">{c.heading}</h5>
               <ul>
                 {c.items.map((it) => (
-                  <li key={it} className="py-[6px] transition-colors hover:text-orange">
+                  <li key={it} className="py-1 transition-colors hover:text-orange md:py-[6px]">
                     {it}
                   </li>
                 ))}
@@ -42,7 +33,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="pt-8 text-[13px] text-white/45">Copyright © 2026 OMAK RAYONNAGE. Tous droits réservés.</div>
+        <div className="pt-5 text-[12px] text-white/45 md:pt-8 md:text-[13px]">{t("copyright")}</div>
       </div>
     </footer>
   );

@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
 import Reveal from "./Reveal";
+
+const ICON_KEYS = ["shield", "gem", "medal"] as const;
 
 const ICONS: Record<string, React.ReactNode> = {
   shield: (
@@ -16,39 +19,34 @@ const ICONS: Record<string, React.ReactNode> = {
   ),
 };
 
-const values = [
-  { i: "shield", t: "Sécurité", p: "La sécurité des personnes et des produits stockés, dans chaque installation." },
-  { i: "gem", t: "Expérience", p: "L'équipe OMAK (étude, solutions, montage) et ses fabricants européens conformes aux normes EN/FEM." },
-  { i: "medal", t: "Qualité", p: "Se démarquer par la perfection des produits et des installations, normes respectées." },
-];
-
 export default function Values() {
+  const t = useTranslations("values");
+  const items = t.raw("items") as Array<{ title: string; text: string }>;
+
   return (
     <section id="valeurs" className="py-[clamp(80px,11vh,140px)]">
       <div className="mx-auto max-w-[1200px] px-[max(22px,4vw)]">
         <Reveal className="max-w-[720px]">
           <span className="mb-[18px] inline-flex items-center gap-[10px] text-[12.5px] font-bold uppercase tracking-[.16em] text-orange before:h-[2px] before:w-6 before:bg-orange before:content-['']">
-            Nos engagements
+            {t("eyebrow")}
           </span>
           <h2 className="text-[clamp(32px,4.4vw,56px)] font-extrabold leading-[1.04] tracking-[-.028em] text-ink">
-            Sécurité. Expérience. Qualité.
+            {t("title")}
           </h2>
-          <p className="mt-[18px] text-[clamp(17px,1.5vw,20px)] leading-[1.55] text-ink2">
-            Trois exigences, à chaque installation.
-          </p>
+          <p className="mt-[18px] text-[clamp(17px,1.5vw,20px)] leading-[1.55] text-ink2">{t("intro")}</p>
         </Reveal>
 
         <div className="mt-13 grid grid-cols-1 gap-7 md:grid-cols-3">
-          {values.map((v) => (
-            <Reveal key={v.t}>
+          {items.map((v, index) => (
+            <Reveal key={v.title}>
               <div className="rounded-2xl border border-black/10 bg-white p-[34px_30px] shadow-[0_14px_36px_rgba(17,19,21,.06)] transition-all duration-300 hover:-translate-y-1 hover:border-orange/40 hover:shadow-[0_20px_50px_rgba(17,19,21,.12)]">
                 <div className="mb-5 grid h-14 w-14 place-items-center rounded-[14px] bg-orange/10 text-orange">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
-                    {ICONS[v.i]}
+                    {ICONS[ICON_KEYS[index] ?? "shield"]}
                   </svg>
                 </div>
-                <h3 className="text-[21px] font-extrabold text-ink">{v.t}</h3>
-                <p className="mt-[10px] text-[15px] leading-[1.55] text-ink2">{v.p}</p>
+                <h3 className="text-[21px] font-extrabold text-ink">{v.title}</h3>
+                <p className="mt-[10px] text-[15px] leading-[1.55] text-ink2">{v.text}</p>
               </div>
             </Reveal>
           ))}
