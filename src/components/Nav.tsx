@@ -39,7 +39,10 @@ export default function Nav() {
             <button
               type="button"
               aria-haspopup="true"
-              className="cursor-default text-white/80 transition-colors hover:text-white group-hover:text-white"
+              aria-current={isActive("/produits") ? "page" : undefined}
+              className={`cursor-default transition-colors ${
+                isActive("/produits") ? "text-orange" : "text-white/80 hover:text-white group-hover:text-white"
+              }`}
             >
               {t("products")}
             </button>
@@ -186,19 +189,23 @@ export default function Nav() {
                 ["/#produits", t("products")],
                 ["/services", t("services")],
                 ["/contact", t("contact")],
-              ].map(([href, label]) => (
+              ].map(([href, label]) => {
+                // "/#produits" points to the home section but should light up on /produits/* pages
+                const active = href === "/#produits" ? isActive("/produits") : isActive(href);
+                return (
                 <Link
                   key={href}
                   href={href}
                   onClick={closeMobileMenu}
-                  aria-current={isActive(href) ? "page" : undefined}
+                  aria-current={active ? "page" : undefined}
                   className={`rounded-[18px] px-4 py-3 text-[15px] font-bold transition-colors hover:bg-white/[.07] ${
-                    isActive(href) ? "bg-white/[.06] text-orange" : "text-white/82 hover:text-white"
+                    active ? "bg-white/[.06] text-orange" : "text-white/82 hover:text-white"
                   }`}
                 >
                   {label}
                 </Link>
-              ))}
+                );
+              })}
             </div>
             <div className="mt-2 grid grid-cols-2 gap-2 border-t border-white/10 pt-2">
               <Link
