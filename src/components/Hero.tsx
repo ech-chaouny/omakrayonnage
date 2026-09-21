@@ -407,7 +407,7 @@ export default function Hero() {
               </p>
               <h1
                 aria-label={title}
-                className="flex flex-wrap items-baseline justify-center gap-x-[.24em] gap-y-2 font-nb text-[46px] font-extrabold leading-[.9] text-white sm:gap-x-[.28em] sm:text-[58px] sm:leading-[.92] md:flex-nowrap md:text-[72px] lg:text-[86px] xl:text-[96px]"
+                className="flex flex-wrap items-baseline justify-center gap-x-[.24em] gap-y-2 font-nb text-[46px] font-extrabold leading-[.9] text-white sm:gap-x-[.28em] sm:text-[58px] sm:leading-[.92] md:text-[72px] lg:text-[86px] xl:text-[96px]"
               >
                 {heroWords.map((word) => (
                   <span

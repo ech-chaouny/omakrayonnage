@@ -68,14 +68,6 @@ export default function Clients() {
                 {t("title")}
               </h2>
               <p className="mt-4 max-w-[34ch] text-[14px] font-medium leading-[1.6] text-ink2 md:mt-6 md:text-[16px] md:leading-[1.7]">{t("intro")}</p>
-              <div className="mt-5 flex flex-wrap gap-2 md:mt-8">
-                <span className="rounded-full bg-orange px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.12em] text-white md:px-4 md:py-2 md:text-[11px] md:tracking-[.14em]">
-                  {t("badge")}
-                </span>
-                <span className="rounded-full border border-black/10 bg-white px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.12em] text-ink2 md:px-4 md:py-2 md:text-[11px] md:tracking-[.14em]">
-                  {totalClients} {t("referencesSuffix")}
-                </span>
-              </div>
             </div>
           </Reveal>
 

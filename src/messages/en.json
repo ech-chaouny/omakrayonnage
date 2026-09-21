@@ -56,31 +56,71 @@
   },
   "stats": {
     "eyebrow": "Key figures",
-    "title": "A solid base from the start.",
-    "intro": "Three quick markers before diving into the partners, the solutions and the OMAK method.",
+    "title": "A solid base.",
+    "intro": "OMAK RAYONNAGE in figures",
     "items": [
       {
-        "label": "Companies equipped",
-        "text": "Industrial sites supported across Morocco, from study to assembly."
+        "label": "Years of experience",
+        "text": "Proven expertise built over many years"
+      },
+      {
+        "label": "Completed projects",
+        "text": "Loyal customers throughout Morocco"
       },
       {
         "label": "European partners",
-        "text": "STOW and MANORGA to cover heavy, light and platform systems."
+        "text": "World leader in quality racking and automated storage solutions"
+      },
+      {
+        "label": "Stock",
+        "text": "Made in Europe, immediately available in Morocco."
       },
       {
         "label": "Steps mastered",
-        "text": "Audit, survey, 3D design, manufacturing, installation, inspection and after-sales."
+        "text": "Needs analysis, site measurements, technical study, production, installation, inspection/after-sales service"
       }
     ]
   },
   "iso": {
     "eyebrow": "Quality certification",
     "badge": "Controlled organization",
-    "intro": "This certification shows that OMAK works with a structured quality system: needs are framed, steps are followed, and installations are inspected before delivery.",
+    "intro": "This certification attests that OMAK ensures a rigorous quality system: clearly defined needs, closely monitored stages, and installations checked before delivery.",
     "points": [
-      ["01", "Tracked process", "A clear method from the need to the final inspection."],
-      ["02", "Consistent quality", "Documented steps to keep the same level of requirement."],
-      ["03", "Client trust", "A serious foundation for durable, safe installations."]
+      [
+        "01",
+        "Tracked process",
+        "A clear method from the need to the final inspection."
+      ],
+      [
+        "02",
+        "Consistent quality",
+        "Documented steps to keep the same level of requirement."
+      ],
+      [
+        "03",
+        "Client trust",
+        "A serious foundation for durable, safe installations."
+      ]
+    ],
+    "standardsTitle": "Standards and recommendations",
+    "standardsIntro": "OMAK provides storage systems in strict compliance with European safety, quality and performance standards, drawing on recognized industry standards.",
+    "standards": [
+      [
+        "EN 15512",
+        "Specifies requirements and methods"
+      ],
+      [
+        "EN 15629",
+        "Specifies technical requirements for racking and storage equipment for heavy loads"
+      ],
+      [
+        "EN 15635",
+        "Specifies requirements for the management, use and maintenance of storage systems"
+      ],
+      [
+        "EN 15620",
+        "Defines requirements for tolerances, deflections and clearances in the design and assembly of racking"
+      ]
     ]
   },
   "partners": {
@@ -117,35 +157,35 @@
     "steps": ["Audit & needs", "Survey & study", "3D design", "Manufacturing", "Installation", "Inspection & after-sales"]
   },
   "campaign": {
-    "eyebrow": "Why OMAK",
-    "title": "The partner you can trust.",
+    "eyebrow": "Why OMAK?",
+    "title": "A partner you can trust",
     "intro": "Local expertise reinforced by two recognized European manufacturers, for safe, durable and compliant installations.",
     "reasons": [
       {
-        "title": "Certified quality",
-        "text": "European manufacturers compliant with EN/FEM standards and inspected installations."
-      },
-      {
-        "title": "Dual partnership",
-        "text": "STOW partner and exclusive MANORGA distributor: the right brand for every need."
+        "title": "Proximity",
+        "text": "Nationwide presence, responsiveness and availability"
       },
       {
         "title": "Turnkey project",
-        "text": "Study, 3D design, manufacturing, assembly, inspection and after-sales by a single team."
+        "text": "Support through multiple carefully managed stages with a single partner"
       },
       {
-        "title": "Close to Morocco",
-        "text": "Local presence in Casablanca, responsiveness and on-site support."
+        "title": "European partners",
+        "text": "Two leading brands with expertise in racking"
+      },
+      {
+        "title": "Certified and compliant",
+        "text": "European products compliant with EN/FEM standards and certified installations."
       }
     ]
   },
   "homeProducts": {
-    "eyebrow": "Integrated storage solutions",
+    "eyebrow": "Tailored storage solutions",
     "titleLead": "Our",
     "titleAccent": "Solutions",
-    "intro": "A full range, but a simple approach: pick the structure that truly serves your flow.",
+    "intro": "A complete range with a simple approach: choose the structure that truly optimizes your warehouse.",
     "methodEyebrow": "OMAK method",
-    "methodText": "Study, sizing, installation and inspection: every solution follows the loads, the heights and the real flow.",
+    "methodText": "Study, sizing, installation and inspection: equipment tailored to your loads, heights and operational flows.",
     "navAriaLabel": "Solutions navigation",
     "viewSolution": "View the solution"
   },
@@ -179,7 +219,7 @@
     "eyebrow": "Project",
     "titleLead": "Let's optimize your",
     "titleAccent": "warehouse",
-    "intro": "From study to after-sales service — one team, accountable end to end.",
+    "intro": "From study to installation — one team, responsible from start to finish.",
     "quote": "Request a quote",
     "phone": "06 62 50 02 31"
   },
@@ -508,12 +548,25 @@
         "eyebrow": "Pallet storage",
         "headline": "The structure built for heavy loads.",
         "intro": "A robust solution to organize pallets, secure aisles and make use of the available height in industrial warehouses.",
-        "stats": [["Use", "Pallets"], ["Structure", "Certified steel"], ["Project", "Custom built"]],
+        "stats": [
+          [
+            "Use",
+            "Pallets"
+          ],
+          [
+            "Structure",
+            "Certified steel"
+          ],
+          [
+            "Project",
+            "Custom built"
+          ]
+        ],
         "uses": [
-          "Logistics warehouses and distribution platforms",
-          "High-bay storage zones",
-          "Industrial back stock with steady flow",
-          "Storage of uniform or multi-reference pallets"
+          "Heavy-duty racking is a modular and flexible system with 100% access to every pallet",
+          "A wide range of dimensions and accessories to accommodate all load sizes and products",
+          "Computer-aided design enables us to find the best solution for every application",
+          "The heavy-duty racking system complies with European FEM and EN regulations"
         ],
         "advantages": [
           "Clear read of locations and direct access to pallets",
@@ -522,23 +575,45 @@
           "Controlled assembly for durable operation"
         ],
         "specs": [
-          ["Type", "Heavy pallet racking"],
-          ["Brands", "STOW / MANORGA"],
-          ["Fit for", "Heavy loads"],
-          ["Options", "Protections, supports, signage"]
+          [
+            "Type",
+            "Heavy pallet racking"
+          ],
+          [
+            "Brands",
+            "STOW / MANORGA"
+          ],
+          [
+            "Fit for",
+            "Heavy loads"
+          ],
+          [
+            "Options",
+            "Protections, supports, signage"
+          ]
         ],
         "steps": [
-          ["Technical survey", "Dimensions, clear height, loads and forklift flow."],
-          ["Sizing", "Choice of uprights, beams, levels and protections."],
-          ["Installation", "Assembly, alignment, inspection and commissioning."]
-        ]
+          [
+            "Technical survey",
+            "Dimensions, clear height, loads and forklift flow."
+          ],
+          [
+            "Sizing",
+            "Choice of uprights, beams, levels and protections."
+          ],
+          [
+            "Installation",
+            "Assembly, alignment, inspection and commissioning."
+          ]
+        ],
+        "usageTitle": "Why choose a heavy-duty racking system?"
       },
       "semi-lourd-leger": {
         "title": "Semi-heavy & light racking",
         "navTitle": "Semi-heavy / light",
         "caption": "Boxes, bins, picking and archives.",
         "eyebrow": "Picking & back stock",
-        "headline": "Smooth organization for small and medium loads.",
+        "headline": "Ideal for archives, boxes, bins, spare parts, production lines and preparation zones where readability matters as much as capacity.",
         "intro": "Ideal for boxes, bins, spare parts, archives and preparation zones where readability matters as much as capacity.",
         "stats": [["Use", "Picking"], ["Load", "Light to medium"], ["Assembly", "Scalable"]],
         "uses": [
@@ -635,20 +710,15 @@
         "caption": "Rack, post and aisle protections.",
         "eyebrow": "Securing",
         "headline": "Protect installations before the incident.",
-        "intro": "A reliable installation also relies on protections: guards, upright protectors, barriers, stops, signage and separation elements.",
-        "stats": [["Role", "Prevention"], ["Zones", "Aisles & feet"], ["Impact", "Fewer stoppages"]],
+        "intro": "A reliable installation also depends on protection: upright/frame protectors, barriers, stops, signage and separation elements.",
+        "stats": [["Role", "Prevention"], ["Zone", "Traffic"], ["Impact", "Peace of mind"]],
         "uses": [
           "Protection of racking uprights",
           "Separation of pedestrian and forklift zones",
           "Securing corners, aisles and sensitive zones",
           "Upgrading existing installations"
         ],
-        "advantages": [
-          "Reduces risks linked to handling impacts",
-          "Makes circulation zones clearer",
-          "Protects the racking investment over time",
-          "Fits new or existing installations"
-        ],
+        "advantages": ["Reduces risks from handling impacts", "Makes traffic zones clearer and ensures operator safety", "Extends the service life of your racking", "Adapts to new and existing installations"],
         "specs": [
           ["Type", "Rack & circulation protection"],
           ["Brand", "MANORGA"],
@@ -666,21 +736,11 @@
         "navTitle": "Accessories & handling",
         "caption": "Supports, mesh, dividers and parts.",
         "eyebrow": "Add-ons",
-        "headline": "The right accessories make storage clearer.",
+        "headline": "The right accessories turn a simple storage space into a clear and efficient system.",
         "intro": "Supports, mesh, decking, dividers, bins, shelves and finishing parts complete the racking to fit the real site.",
-        "stats": [["Role", "Adapt"], ["Use", "Finishing"], ["Service", "After-sales & parts"]],
-        "uses": [
-          "Adapting racking to specific pallets or parcels",
-          "Separating references and holding loads",
-          "Safety and finishing add-ons",
-          "Replacing or adding parts on existing installations"
-        ],
-        "advantages": [
-          "Improves order and the read of locations",
-          "Lets you adapt a structure without replacing it all",
-          "Makes daily operation easier for teams",
-          "Available for new projects or maintenance"
-        ],
+        "stats": [["Role", "Customize"], ["Use", "Adapted"], ["Impact", "Simplify"]],
+        "uses": ["Adapting racking to specific loads", "Separating product references and securing loads", "Safety and finishing additions", "Replacing or adding components to existing installations"],
+        "advantages": ["Improves organization and visibility of storage locations", "Allows a structure to be adapted without replacing everything", "Makes daily operations easier for teams", "Ideal for new or existing installations"],
         "specs": [
           ["Type", "Racking accessories"],
           ["Brand", "MANORGA"],

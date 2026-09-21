@@ -25,62 +25,108 @@
   },
   "hero": {
     "eyebrow": "OMAK RAYONNAGE",
-    "words": ["L'ingénierie", "du", "stockage."],
+    "words": [
+      "L'avenir",
+      "du",
+      "stockage",
+      "commence",
+      "ici"
+    ],
     "accentIndex": 2,
-    "subtitle": "Partenaire STOW · Distributeur exclusif MANORGA · Casablanca",
-    "liveBadge": "Montage en direct",
+    "subtitle": "Optimisez chaque espace grâce à nos solutions de rayonnage sur mesure",
+    "liveBadge": "Montage de la structure",
     "guideBadge": "3D guide",
     "scroll": "Scroll",
     "steps": [
       {
-        "eyebrow": "Ossature",
-        "title": "Montants & structure",
-        "description": "Les cadres verticaux se placent en premier pour donner l'alignement et la stabilité du rayonnage."
+        "eyebrow": "Composant vertical",
+        "title": "Échelles",
+        "description": "Les échelles se composent de deux montants et d’un certain nombre de diagonales. Elles se placent en premier pour donner l’alignement et la stabilité du rayonnage."
       },
       {
-        "eyebrow": "Portance",
-        "title": "Lisses porteuses",
-        "description": "Les traverses rouges définissent les niveaux de charge, avec une lecture claire des hauteurs utiles."
+        "eyebrow": "Composant horizontal",
+        "title": "Lisses",
+        "description": "Les lisses se montent par paires. Elles définissent les niveaux de stockage."
       },
       {
-        "eyebrow": "Préparation",
-        "title": "Palettes & supports",
-        "description": "Les supports viennent compléter chaque niveau pour recevoir les palettes sans improvisation."
+        "eyebrow": "Utilisation",
+        "title": "Marchandise",
+        "description": "Les palettes et charges stockées sont positionnées sur les lisses."
       },
       {
         "eyebrow": "Résultat final",
         "title": "Rayonnage opérationnel",
-        "description": "La structure devient un système prêt à stocker: propre, lisible, sécurisé et adapté au flux."
+        "description": "Une installation prête à l’exploitation : organisée, visible, sécurisée et adaptée aux flux."
       }
     ]
   },
   "stats": {
     "eyebrow": "Chiffres clés",
-    "title": "Une base solide dès le départ.",
-    "intro": "Trois repères rapides avant d'entrer dans les partenaires, les solutions et la méthode OMAK.",
+    "title": "Une base solide.",
+    "intro": "OMAK RAYONNAGE en quelques chiffres",
     "items": [
       {
-        "label": "Entreprises équipées",
-        "text": "Des sites industriels accompagnés au Maroc, de l'étude au montage."
+        "label": "ans d’expérience",
+        "text": "Une expérience confirmée depuis plusieurs années"
+      },
+      {
+        "label": "Projets réalisés",
+        "text": "Des clients fidélisés sur l’ensemble du royaume"
       },
       {
         "label": "Partenaires européens",
-        "text": "STOW et MANORGA pour couvrir les systèmes lourds, légers et plateformes."
+        "text": "Leader mondial des rayonnages de qualité et des solutions de stockage automatisées"
+      },
+      {
+        "label": "Stock",
+        "text": "Fabriqué en Europe, disponible immédiatement au Maroc."
       },
       {
         "label": "Étapes maîtrisées",
-        "text": "Audit, relevé, conception 3D, fabrication, installation, contrôle et SAV."
+        "text": "Analyse du besoin, relevé de cotes, étude technique, production, installation, inspection/SAV"
       }
     ]
   },
   "iso": {
     "eyebrow": "Certification qualité",
     "badge": "Organisation contrôlée",
-    "intro": "Cette certification montre qu'OMAK travaille avec un système qualité structuré: les besoins sont cadrés, les étapes sont suivies, et les installations sont contrôlées avant livraison.",
+    "intro": "Cette certification atteste qu'OMAK garantit un système qualité rigoureux : besoins bien cadrés, étapes suivies de près, installations vérifiées avant livraison.",
     "points": [
-      ["01", "Process suivi", "Une méthode claire du besoin jusqu'au contrôle final."],
-      ["02", "Qualité constante", "Des étapes documentées pour garder le même niveau d'exigence."],
-      ["03", "Confiance client", "Une base sérieuse pour des installations durables et sûres."]
+      [
+        "01",
+        "Process suivi",
+        "Une méthode claire du besoin jusqu'au contrôle final."
+      ],
+      [
+        "02",
+        "Qualité constante",
+        "Des étapes documentées pour garder le même niveau d'exigence."
+      ],
+      [
+        "03",
+        "Confiance client",
+        "Une base sérieuse pour des installations durables et sûres."
+      ]
+    ],
+    "standardsTitle": "Normes et recommandations",
+    "standardsIntro": "OMAK propose des systèmes de stockage dans le respect strict des normes européennes de sécurité, de qualité et de performance, en s'appuyant sur les standards reconnus du secteur.",
+    "standards": [
+      [
+        "EN 15512",
+        "Spécifie les exigences et les méthodes"
+      ],
+      [
+        "EN 15629",
+        "Spécifie les exigences techniques pour les rayonnages et les équipements de stockage pour charges lourdes"
+      ],
+      [
+        "EN 15635",
+        "Spécifie les exigences relatives à la gestion, à l’utilisation et à la maintenance des systèmes de stockage"
+      ],
+      [
+        "EN 15620",
+        "Définit les exigences en matière de tolérances, de déflexions et d’espaces libres pour la conception et l’assemblage des rayonnages"
+      ]
     ]
   },
   "partners": {
@@ -95,57 +141,84 @@
         "role": "Partenaire systèmes lourds",
         "origin": "Belgique",
         "text": "Leader européen du stockage et du rayonnage pour les systèmes lourds: palettiers, drive-in, stockage dynamique, navette pallet shuttle, mobile, AS/RS, silo, cantilever et mezzanines.",
-        "items": ["Palettiers", "Grande hauteur", "Normes EN/FEM"]
+        "items": [
+          "Palettiers",
+          "Grande hauteur",
+          "Normes EN/FEM"
+        ]
       },
       "manorga": {
         "role": "Distributeur exclusif",
         "origin": "France",
         "text": "Fabricant français depuis plus de 50 ans pour les rayonnages léger, mi-lourd et lourd, les plateformes, les cloisons industrielles, la manutention et la sécurité.",
-        "items": ["Made in France", "Sur mesure", "Co-conception"]
+        "items": [
+          "Made in France",
+          "Sur mesure",
+          "Co-conception"
+        ]
       }
     },
     "strengths": [
-      ["01", "Systèmes lourds", "STOW pour les installations à forte charge, grande hauteur et flux intensifs."],
-      ["02", "Rayonnage complet", "MANORGA pour les besoins léger, mi-lourd, plateformes et zones techniques."],
-      ["03", "Intégration locale", "OMAK assure l'étude, la fabrication, le montage, le contrôle et le SAV au Maroc."]
+      [
+        "01",
+        "Systèmes lourds",
+        "STOW pour les installations à forte charge, grande hauteur et flux intensifs."
+      ],
+      [
+        "02",
+        "Rayonnage complet",
+        "MANORGA pour les besoins léger, mi-lourd, plateformes et zones techniques."
+      ],
+      [
+        "03",
+        "Intégration locale",
+        "OMAK assure l'étude, la fabrication, le montage, le contrôle et le SAV au Maroc."
+      ]
     ]
   },
   "quote": {
     "eyebrow": "Méthode",
     "title": "De l'audit à la mise en service.",
     "intro": "Une seule équipe, responsable de bout en bout: étude, conception 3D, fabrication, montage, contrôle et service après-vente.",
-    "steps": ["Audit & besoins", "Relevé & étude", "Conception 3D", "Fabrication", "Installation", "Contrôle & SAV"]
+    "steps": [
+      "Audit & besoins",
+      "Relevé & étude",
+      "Conception 3D",
+      "Fabrication",
+      "Installation",
+      "Contrôle & SAV"
+    ]
   },
   "campaign": {
-    "eyebrow": "Pourquoi OMAK",
-    "title": "Le partenaire de confiance.",
+    "eyebrow": "Pourquoi OMAK ?",
+    "title": "Un partenaire de confiance",
     "intro": "Une expertise locale renforcée par deux fabricants européens reconnus, pour des installations sûres, durables et conformes.",
     "reasons": [
       {
-        "title": "Qualité certifiée",
-        "text": "Fabricants européens conformes aux normes EN/FEM et installations contrôlées."
+        "title": "Proximité",
+        "text": "Présence sur l’ensemble du territoire, réactivité et disponibilité"
       },
       {
-        "title": "Double partenariat",
-        "text": "Partenaire STOW et distributeur exclusif MANORGA: la bonne marque pour chaque besoin."
+        "title": "Projet « Clé en main »",
+        "text": "Un accompagnement en plusieurs étapes maîtrisées par un seul partenaire"
       },
       {
-        "title": "Projet clé en main",
-        "text": "Étude, conception 3D, fabrication, montage, contrôle et SAV par une seule équipe."
+        "title": "Partenaires européens",
+        "text": "Deux marques leaders et expertes dans le rayonnage"
       },
       {
-        "title": "Proximité Maroc",
-        "text": "Présence locale à Casablanca, réactivité et accompagnement terrain."
+        "title": "Certifié et aux normes",
+        "text": "Produits européens conformes aux normes EN/FEM et installations certifiées."
       }
     ]
   },
   "homeProducts": {
-    "eyebrow": "Solutions de stockage intégrées",
+    "eyebrow": "Solutions de stockage adaptées",
     "titleLead": "Nos",
     "titleAccent": "Solutions",
-    "intro": "Une gamme complète, mais une approche simple: choisir la structure qui sert vraiment votre flux.",
+    "intro": "Une gamme complète avec une approche simple : choisir la structure qui optimise vraiment votre entrepôt.",
     "methodEyebrow": "Méthode OMAK",
-    "methodText": "Étude, dimensionnement, installation et contrôle: chaque solution suit les charges, les hauteurs et le flux réel.",
+    "methodText": "Étude, dimensionnement, installation et contrôle : des équipements taillés sur mesure selon vos charges, hauteurs et flux d'activité.",
     "navAriaLabel": "Navigation des solutions",
     "viewSolution": "Voir la solution"
   },
@@ -179,7 +252,7 @@
     "eyebrow": "Projet",
     "titleLead": "Optimisons votre",
     "titleAccent": "entrepôt",
-    "intro": "De l'étude au service après-vente — une seule équipe, responsable de bout en bout.",
+    "intro": "De l'étude à l’installation — une seule équipe, responsable de bout en bout.",
     "quote": "Demander un devis",
     "phone": "06 62 50 02 31"
   },
@@ -188,9 +261,18 @@
     "title": "Sécurité. Expérience. Qualité.",
     "intro": "Trois exigences, à chaque installation.",
     "items": [
-      { "title": "Sécurité", "text": "La sécurité des personnes et des produits stockés, dans chaque installation." },
-      { "title": "Expérience", "text": "L'équipe OMAK (étude, solutions, montage) et ses fabricants européens conformes aux normes EN/FEM." },
-      { "title": "Qualité", "text": "Se démarquer par la perfection des produits et des installations, normes respectées." }
+      {
+        "title": "Sécurité",
+        "text": "La sécurité des personnes et des produits stockés, dans chaque installation."
+      },
+      {
+        "title": "Expérience",
+        "text": "L'équipe OMAK (étude, solutions, montage) et ses fabricants européens conformes aux normes EN/FEM."
+      },
+      {
+        "title": "Qualité",
+        "text": "Se démarquer par la perfection des produits et des installations, normes respectées."
+      }
     ]
   },
   "footer": {
@@ -198,11 +280,22 @@
     "cols": {
       "solutions": {
         "heading": "Solutions",
-        "items": ["Rayonnage lourd", "Semi-lourd & léger", "Cantilever", "Plateformes", "Protection & sécurité"]
+        "items": [
+          "Rayonnage lourd",
+          "Semi-lourd & léger",
+          "Cantilever",
+          "Plateformes",
+          "Protection & sécurité"
+        ]
       },
       "services": {
         "heading": "Services",
-        "items": ["Étude & conception", "Installation & montage", "Contrôle des installations", "Service après-vente"]
+        "items": [
+          "Étude & conception",
+          "Installation & montage",
+          "Contrôle des installations",
+          "Service après-vente"
+        ]
       },
       "contact": {
         "heading": "Contact",
@@ -276,7 +369,7 @@
     },
     "workflow": {
       "eyebrow": "Workflow",
-      "title": "Le service suit le chantier.",
+      "title": "Des étapes maîtrisées",
       "intro": "Chaque service répond à une étape précise. La lecture reste simple: ce qui entre, ce qui sort, et ce que votre équipe gagne sur le terrain."
     },
     "benchmarks": {
@@ -303,9 +396,21 @@
     },
     "method": {
       "points": [
-        ["01", "Cadrage", "Besoin, mesures, charges, contraintes et objectif d'exploitation."],
-        ["02", "Décision", "Choix technique, budget, planning et organisation terrain."],
-        ["03", "Exécution", "Montage, contrôle, réception et suivi après mise en service."]
+        [
+          "01",
+          "Cadrage",
+          "Besoin, mesures, charges, contraintes et objectif d'exploitation."
+        ],
+        [
+          "02",
+          "Décision",
+          "Choix technique, budget, planning et organisation terrain."
+        ],
+        [
+          "03",
+          "Exécution",
+          "Montage, contrôle, réception et suivi après mise en service."
+        ]
       ]
     },
     "cta": {
@@ -334,7 +439,12 @@
     "impact": {
       "eyebrow": "Impact",
       "title": "Pourquoi c'est utile.",
-      "labels": ["Décision claire", "Flux optimisé", "Risque réduit", "Suivi terrain"],
+      "labels": [
+        "Décision claire",
+        "Flux optimisé",
+        "Risque réduit",
+        "Suivi terrain"
+      ],
       "fallback": "Impact terrain"
     },
     "continuity": {
@@ -351,51 +461,63 @@
   "about": {
     "hero": {
       "eyebrow": "Qui sommes-nous",
-      "title": "L'expertise locale du stockage industriel.",
-      "intro": "OMAK RAYONNAGE accompagne les entreprises au Maroc dans la vente, l'étude et l'installation de systèmes de rayonnage métallique, du besoin initial jusqu'au service après-vente.",
+      "title": "Expert des solutions de stockage",
+      "intro": "Depuis sa création, OMAK RAYONNAGE s'est imposé comme un partenaire de confiance en matière de solutions de stockage. Nous accompagnons nos clients à chaque étape de leur projet — étude, conception, installation et service après-vente avec des systèmes de rayonnage performants, fabriqués en Europe et disponibles en stock au Maroc pour garantir réactivité et proximité.",
       "badge": "Casablanca",
       "badgeText": "Étude, montage, contrôle et SAV",
       "imageAlt": "Équipe OMAK RAYONNAGE dans un entrepôt équipé"
     },
     "figures": [
-      ["+90", "Entreprises équipées"],
-      ["2", "Partenaires européens"],
-      ["6", "Étapes maîtrisées"],
-      ["ISO", "Qualité certifiée"]
+      [
+        "+90",
+        "Entreprises équipées"
+      ],
+      [
+        "2",
+        "Partenaires européens"
+      ],
+      [
+        "6",
+        "Étapes maîtrisées"
+      ],
+      [
+        "ISO & EN",
+        "Normes et Qualités CE"
+      ]
     ],
     "interlocutor": {
       "eyebrow": "OMAK Maroc",
       "title": "Un interlocuteur unique.",
       "lead": "Nous proposons une large gamme de produits et services pour les entrepôts, magasins, ateliers et bureaux: rayonnage métallique, plateformes, mezzanines, protections, accessoires et solutions personnalisées.",
       "services": [
-        "Audit du besoin",
+        "Identification du besoin",
         "Étude & conception",
-        "Conception 3D",
+        "Plan 2D & 3D",
         "Installation & montage",
-        "Contrôle des installations",
+        "Contrôle et suivi des installations",
         "Maintenance & SAV"
       ]
     },
     "ranges": {
       "eyebrow": "Gammes",
       "title": "Chaque contrainte a sa solution.",
-      "intro": "La bonne réponse dépend de la charge, du flux, de la hauteur, des accès et de l'évolution future du site.",
+      "intro": "Le choix de la solution la plus adaptée dépend de plusieurs facteurs clés : la charge à stocker, les flux logistiques, la hauteur disponible, les contraintes d'accès et les perspectives d'évolution du site.",
       "items": [
         {
-          "title": "Gamme légère",
-          "text": "Rayonnages archives fixes ou mobiles, petits accessoires, bacs et pièces de détail."
+          "title": "Léger",
+          "text": "Rayonnages archives, accessoires, bacs et petites pièces."
         },
         {
-          "title": "Gamme semi-lourde",
-          "text": "Rayonnages PDR, picking, pneus, cantilever pour charges verticales et zones techniques."
+          "title": "Semi-lourde",
+          "text": "Rayonnages PDR, picking, pneus, cantilever léger pour charges verticales et zones techniques."
         },
         {
-          "title": "Gamme lourde",
-          "text": "Palettiers, accumulation, rayonnage dynamique et rayonnage mobile à palettes."
+          "title": "Lourd",
+          "text": "Rayonnages à palettes, par accumulation et dynamique."
         },
         {
-          "title": "Gamme spéciale",
-          "text": "Navettes, plateformes, mezzanines, silos et solutions personnalisées sur mesure."
+          "title": "Automatisé et Autres",
+          "text": "Rayonnage à Navettes, Mobiles, plateformes, mezzanines, silos et solutions personnalisées sur mesure."
         }
       ]
     },
@@ -436,8 +558,8 @@
     },
     "cta": {
       "eyebrow": "Projet",
-      "title": "Découvrez le choix intelligent pour votre installation.",
-      "intro": "Parlons de votre site, de vos charges, de vos flux et de la meilleure approche technique.",
+      "title": "Faites le choix intelligent pour vos installations",
+      "intro": "Discutons de votre besoin pour définir ensemble la meilleure approche technique.",
       "quote": "Demander un devis",
       "phone": "06 62 50 02 31"
     }
@@ -445,9 +567,13 @@
   "contact": {
     "hero": {
       "eyebrow": "Contact",
-      "title": "Un devis clair, une réponse rapide.",
-      "intro": "Partagez les dimensions, les charges et les contraintes de votre espace. L'équipe OMAK cadre l'étude et vous oriente vers la solution la plus adaptée.",
-      "highlights": ["Devis gratuit", "Étude technique", "Réponse rapide"],
+      "title": "Un devis clair et détaillé, une réponse rapide",
+      "intro": "Partagez les dimensions, les charges et les contraintes de votre espace. L'équipe OMAK Rayonnage cadre l'étude et vous oriente vers la solution la plus adaptée.",
+      "highlights": [
+        "Devis gratuit",
+        "Étude technique",
+        "Réponse rapide"
+      ],
       "fillForm": "Remplir le formulaire",
       "imageAlt": "Étude de projet de rayonnage industriel",
       "sideService": "Service commercial",
@@ -468,7 +594,14 @@
         "city": "Ville"
       },
       "needTypeLabel": "Type de besoin",
-      "needs": ["Rayonnage lourd", "Semi-lourd / léger", "Cantilever", "Plateforme", "Sécurité", "SAV"],
+      "needs": [
+        "Rayonnage lourd",
+        "Semi-lourd / léger",
+        "Cantilever",
+        "Plateforme",
+        "Sécurité",
+        "SAV"
+      ],
       "messagePlaceholder": "Votre besoin: dimensions, charges, surface, délai souhaité...",
       "submit": "Envoyer la demande"
     },
@@ -489,7 +622,7 @@
     },
     "map": {
       "eyebrow": "Localisation",
-      "title": "Retrouvez OMAK à Casablanca.",
+      "title": "Visitez notre Showroom",
       "address": "Bd Attaka, Casablanca 22580",
       "country": "Maroc",
       "directions": "Itinéraire",
@@ -508,12 +641,25 @@
         "eyebrow": "Stockage palettes",
         "headline": "La structure pensée pour les charges lourdes.",
         "intro": "Une solution robuste pour organiser les palettes, sécuriser les allées et exploiter la hauteur disponible dans les entrepôts industriels.",
-        "stats": [["Usage", "Palettes"], ["Structure", "Acier certifié"], ["Projet", "Sur mesure"]],
+        "stats": [
+          [
+            "Usage",
+            "Palettes"
+          ],
+          [
+            "Structure",
+            "Acier certifié"
+          ],
+          [
+            "Projet",
+            "Sur mesure"
+          ]
+        ],
         "uses": [
-          "Entrepôts logistiques et plateformes de distribution",
-          "Zones de stockage grande hauteur",
-          "Réserves industrielles avec flux régulier",
-          "Stockage de palettes homogènes ou multi-références"
+          "Le rayonnage lourd est un système modulaire et flexible avec un accès à 100% de chaque palette",
+          "Grande variété de dimensions et d’accessoires pour s’adapter à toutes les tailles de charge et à tous les produits",
+          "La conception assistée par ordinateur nous permet de trouver la meilleure solution pour chaque application",
+          "Le système de rayonnage lourd est conforme aux réglementations européennes FEM et EN"
         ],
         "advantages": [
           "Lecture claire des emplacements et accès direct aux palettes",
@@ -522,25 +668,60 @@
           "Montage contrôlé pour une exploitation durable"
         ],
         "specs": [
-          ["Type", "Palettier lourd"],
-          ["Marques", "STOW / MANORGA"],
-          ["Adapté à", "Charges importantes"],
-          ["Options", "Protections, supports, signalétique"]
+          [
+            "Type",
+            "Palettier lourd"
+          ],
+          [
+            "Marques",
+            "STOW / MANORGA"
+          ],
+          [
+            "Adapté à",
+            "Charges importantes"
+          ],
+          [
+            "Options",
+            "Protections, supports, signalétique"
+          ]
         ],
         "steps": [
-          ["Relevé technique", "Dimensions, hauteur libre, charges et flux de chariots."],
-          ["Dimensionnement", "Choix des montants, lisses, niveaux et protections."],
-          ["Installation", "Montage, alignement, contrôle et mise en service."]
-        ]
+          [
+            "Relevé technique",
+            "Dimensions, hauteur libre, charges et flux de chariots."
+          ],
+          [
+            "Dimensionnement",
+            "Choix des montants, lisses, niveaux et protections."
+          ],
+          [
+            "Installation",
+            "Montage, alignement, contrôle et mise en service."
+          ]
+        ],
+        "usageTitle": "Pourquoi opter pour un système de rayonnage lourd ?"
       },
       "semi-lourd-leger": {
         "title": "Rayonnage semi-lourd & léger",
         "navTitle": "Semi-lourd / léger",
         "caption": "Cartons, bacs, picking et archives.",
         "eyebrow": "Picking & réserve",
-        "headline": "Une organisation fluide pour les petites et moyennes charges.",
+        "headline": "Idéal pour les archives, cartons, bacs, pièces détachées, lignes de production et zones de préparation où la lisibilité compte autant que la capacité.",
         "intro": "Idéal pour les cartons, bacs, pièces détachées, archives et zones de préparation où la lisibilité compte autant que la capacité.",
-        "stats": [["Usage", "Picking"], ["Charge", "Légère à moyenne"], ["Montage", "Évolutif"]],
+        "stats": [
+          [
+            "Usage",
+            "Picking"
+          ],
+          [
+            "Charge",
+            "Légère à moyenne"
+          ],
+          [
+            "Montage",
+            "Évolutif"
+          ]
+        ],
         "uses": [
           "Magasins de pièces détachées",
           "Archives, réserves et ateliers",
@@ -554,15 +735,36 @@
           "Finition propre pour zones techniques ou commerciales"
         ],
         "specs": [
-          ["Type", "Rayonnage léger / semi-lourd"],
-          ["Marque", "MANORGA"],
-          ["Adapté à", "Cartons, bacs, accessoires"],
-          ["Options", "Tablettes, séparateurs, fonds, portes"]
+          [
+            "Type",
+            "Rayonnage léger / semi-lourd"
+          ],
+          [
+            "Marque",
+            "MANORGA"
+          ],
+          [
+            "Adapté à",
+            "Cartons, bacs, accessoires"
+          ],
+          [
+            "Options",
+            "Tablettes, séparateurs, fonds, portes"
+          ]
         ],
         "steps": [
-          ["Classification", "Analyse des références, volumes et rotations."],
-          ["Implantation", "Définition des allées, hauteurs et niveaux."],
-          ["Mise en place", "Montage propre, repérage et ajustement des tablettes."]
+          [
+            "Classification",
+            "Analyse des références, volumes et rotations."
+          ],
+          [
+            "Implantation",
+            "Définition des allées, hauteurs et niveaux."
+          ],
+          [
+            "Mise en place",
+            "Montage propre, repérage et ajustement des tablettes."
+          ]
         ]
       },
       "cantilever": {
@@ -572,7 +774,20 @@
         "eyebrow": "Charges longues",
         "headline": "Stocker les longueurs sans perdre en sécurité.",
         "intro": "Le cantilever libère l'accès frontal pour les charges longues ou volumineuses: tubes, bois, panneaux, profilés, barres et matériaux industriels.",
-        "stats": [["Usage", "Longueurs"], ["Accès", "Frontal"], ["Config.", "Simple ou double face"]],
+        "stats": [
+          [
+            "Usage",
+            "Longueurs"
+          ],
+          [
+            "Accès",
+            "Frontal"
+          ],
+          [
+            "Config.",
+            "Simple ou double face"
+          ]
+        ],
         "uses": [
           "Tubes, profilés métalliques et barres longues",
           "Panneaux bois, tôles et matériaux plats",
@@ -586,15 +801,36 @@
           "Configurations évolutives par niveaux et travées"
         ],
         "specs": [
-          ["Type", "Cantilever industriel"],
-          ["Marque", "STOW"],
-          ["Adapté à", "Charges longues"],
-          ["Options", "Butées, bras, protections, couverture"]
+          [
+            "Type",
+            "Cantilever industriel"
+          ],
+          [
+            "Marque",
+            "STOW"
+          ],
+          [
+            "Adapté à",
+            "Charges longues"
+          ],
+          [
+            "Options",
+            "Butées, bras, protections, couverture"
+          ]
         ],
         "steps": [
-          ["Analyse charge", "Longueur, poids, mode de dépose et rotation."],
-          ["Calcul structure", "Choix des colonnes, bras et entraxes."],
-          ["Pose contrôlée", "Ancrage, alignement et contrôle de stabilité."]
+          [
+            "Analyse charge",
+            "Longueur, poids, mode de dépose et rotation."
+          ],
+          [
+            "Calcul structure",
+            "Choix des colonnes, bras et entraxes."
+          ],
+          [
+            "Pose contrôlée",
+            "Ancrage, alignement et contrôle de stabilité."
+          ]
         ]
       },
       "plateformes-stockage": {
@@ -604,7 +840,20 @@
         "eyebrow": "Gain de surface",
         "headline": "Créer de la surface utile sans déménager.",
         "intro": "Les plateformes et mezzanines transforment la hauteur disponible en surface exploitable pour stocker, préparer, circuler ou aménager une zone technique.",
-        "stats": [["Objectif", "Surface +"], ["Usage", "Stockage / atelier"], ["Étude", "Charge & circulation"]],
+        "stats": [
+          [
+            "Objectif",
+            "Surface +"
+          ],
+          [
+            "Usage",
+            "Stockage / atelier"
+          ],
+          [
+            "Étude",
+            "Charge & circulation"
+          ]
+        ],
         "uses": [
           "Création d'un niveau de stockage supplémentaire",
           "Zones de picking, atelier ou réserve",
@@ -618,15 +867,36 @@
           "Possibilité de phaser le projet selon le budget"
         ],
         "specs": [
-          ["Type", "Plateforme / mezzanine"],
-          ["Marques", "STOW / MANORGA"],
-          ["Adapté à", "Gain de surface"],
-          ["Options", "Escaliers, garde-corps, planchers, sas"]
+          [
+            "Type",
+            "Plateforme / mezzanine"
+          ],
+          [
+            "Marques",
+            "STOW / MANORGA"
+          ],
+          [
+            "Adapté à",
+            "Gain de surface"
+          ],
+          [
+            "Options",
+            "Escaliers, garde-corps, planchers, sas"
+          ]
         ],
         "steps": [
-          ["Relevé site", "Hauteur, poteaux, accès, circulation et contraintes."],
-          ["Conception", "Plan d'implantation, charges et sécurité d'accès."],
-          ["Montage", "Structure, plancher, garde-corps et réception."]
+          [
+            "Relevé site",
+            "Hauteur, poteaux, accès, circulation et contraintes."
+          ],
+          [
+            "Conception",
+            "Plan d'implantation, charges et sécurité d'accès."
+          ],
+          [
+            "Montage",
+            "Structure, plancher, garde-corps et réception."
+          ]
         ]
       },
       "protection-securite": {
@@ -635,8 +905,21 @@
         "caption": "Protections de racks, poteaux et allées.",
         "eyebrow": "Sécurisation",
         "headline": "Protéger les installations avant l'incident.",
-        "intro": "Une installation fiable passe aussi par les protections: sabots, protections montants, barrières, butées, signalétique et éléments de séparation.",
-        "stats": [["Rôle", "Prévention"], ["Zones", "Allées & pieds"], ["Impact", "Moins d'arrêts"]],
+        "intro": "Une installation fiable passe aussi par les protections : protections des montants/échelles, barrières, butées, signalétique et éléments de séparation.",
+        "stats": [
+          [
+            "Rôle",
+            "Prévention"
+          ],
+          [
+            "Zone",
+            "Circulation"
+          ],
+          [
+            "Impact",
+            "Sérénité"
+          ]
+        ],
         "uses": [
           "Protection des montants de rayonnage",
           "Séparation des zones piétons et chariots",
@@ -645,20 +928,41 @@
         ],
         "advantages": [
           "Réduit les risques liés aux impacts de manutention",
-          "Rend les zones de circulation plus lisibles",
-          "Protège l'investissement rayonnage dans la durée",
-          "S'intègre aux installations neuves ou existantes"
+          "Améliore la lisibilité des zones de circulation et assure la sécurité des opérateurs",
+          "Prolonge la durée de vie de vos rayonnages",
+          "S’adapte aux installations neuves et existantes"
         ],
         "specs": [
-          ["Type", "Protection rack & circulation"],
-          ["Marque", "MANORGA"],
-          ["Adapté à", "Sécurité d'exploitation"],
-          ["Options", "Sabots, barrières, butées, marquage"]
+          [
+            "Type",
+            "Protection rack & circulation"
+          ],
+          [
+            "Marque",
+            "MANORGA"
+          ],
+          [
+            "Adapté à",
+            "Sécurité d'exploitation"
+          ],
+          [
+            "Options",
+            "Sabots, barrières, butées, marquage"
+          ]
         ],
         "steps": [
-          ["Diagnostic", "Repérage des zones à risque et flux chariots."],
-          ["Sélection", "Choix des protections selon impact et usage."],
-          ["Pose", "Fixation, alignement et contrôle visuel final."]
+          [
+            "Diagnostic",
+            "Repérage des zones à risque et flux chariots."
+          ],
+          [
+            "Sélection",
+            "Choix des protections selon impact et usage."
+          ],
+          [
+            "Pose",
+            "Fixation, alignement et contrôle visuel final."
+          ]
         ]
       },
       "accessoires-manutention": {
@@ -666,31 +970,65 @@
         "navTitle": "Accessoires & manutention",
         "caption": "Supports, grilles, séparateurs et pièces.",
         "eyebrow": "Compléments",
-        "headline": "Les bons accessoires rendent le stockage plus lisible.",
+        "headline": "Les bons accessoires transforment un simple espace de stockage en un système clair et efficace.",
         "intro": "Supports, grilles, platelages, séparateurs, bacs, tablettes et pièces de finition complètent le rayonnage pour l'adapter au terrain réel.",
-        "stats": [["Rôle", "Adapter"], ["Usage", "Finition"], ["Service", "SAV & pièces"]],
+        "stats": [
+          [
+            "Rôle",
+            "Personnaliser"
+          ],
+          [
+            "Usage",
+            "Adapté"
+          ],
+          [
+            "Impact",
+            "Faciliter"
+          ]
+        ],
         "uses": [
-          "Adaptation d'un rayonnage à des palettes ou colis spécifiques",
+          "Adaptation d'un rayonnage avec des charges spécifiques",
           "Séparation de références et maintien des charges",
           "Compléments de sécurité et de finition",
-          "Remplacement ou ajout de pièces sur installations existantes"
+          "Remplacement ou ajout de composants sur installations existantes"
         ],
         "advantages": [
-          "Améliore l'ordre et la lecture des emplacements",
+          "Améliore l'ordre et la visibilité des emplacements",
           "Permet d'adapter une structure sans tout remplacer",
           "Facilite l'exploitation quotidienne des équipes",
-          "Disponible pour projets neufs ou maintenance"
+          "Idéal pour les installations neuves ou existantes"
         ],
         "specs": [
-          ["Type", "Accessoires de rayonnage"],
-          ["Marque", "MANORGA"],
-          ["Adapté à", "Optimisation & maintenance"],
-          ["Options", "Grilles, supports, séparateurs, tablettes"]
+          [
+            "Type",
+            "Accessoires de rayonnage"
+          ],
+          [
+            "Marque",
+            "MANORGA"
+          ],
+          [
+            "Adapté à",
+            "Optimisation & maintenance"
+          ],
+          [
+            "Options",
+            "Grilles, supports, séparateurs, tablettes"
+          ]
         ],
         "steps": [
-          ["Besoin", "Identifier les références, formats et contraintes."],
-          ["Compatibilité", "Vérifier dimensions, charges et structure existante."],
-          ["Intégration", "Ajout des accessoires et contrôle d'usage."]
+          [
+            "Besoin",
+            "Identifier les références, formats et contraintes."
+          ],
+          [
+            "Compatibilité",
+            "Vérifier dimensions, charges et structure existante."
+          ],
+          [
+            "Intégration",
+            "Ajout des accessoires et contrôle d'usage."
+          ]
         ]
       }
     },
@@ -702,7 +1040,20 @@
         "caption": "Analyse du besoin, implantation et choix technique.",
         "headline": "Une conception claire avant chaque installation.",
         "intro": "OMAK cadre votre besoin dès le départ: dimensions, charges, flux, contraintes bâtiment et objectifs d'exploitation. L'étude permet de choisir la bonne structure avant de lancer le montage.",
-        "stats": [["Entrée", "Besoin client"], ["Sortie", "Solution cadrée"], ["Objectif", "Budget maîtrisé"]],
+        "stats": [
+          [
+            "Entrée",
+            "Besoin client"
+          ],
+          [
+            "Sortie",
+            "Solution cadrée"
+          ],
+          [
+            "Objectif",
+            "Budget maîtrisé"
+          ]
+        ],
         "deliverables": [
           "Analyse des dimensions, charges et hauteurs utiles",
           "Recommandation du type de rayonnage adapté",
@@ -716,9 +1067,18 @@
           "Prépare un montage plus rapide et plus propre"
         ],
         "process": [
-          ["Relevé", "Collecte des contraintes terrain, photos, surfaces et flux."],
-          ["Conception", "Choix technique, niveaux, allées, accès et sécurité."],
-          ["Validation", "Devis, plan et variantes possibles selon budget."]
+          [
+            "Relevé",
+            "Collecte des contraintes terrain, photos, surfaces et flux."
+          ],
+          [
+            "Conception",
+            "Choix technique, niveaux, allées, accès et sécurité."
+          ],
+          [
+            "Validation",
+            "Devis, plan et variantes possibles selon budget."
+          ]
         ]
       },
       "installation-montage": {
@@ -728,7 +1088,20 @@
         "caption": "Montage, alignement, ancrage et mise en service.",
         "headline": "Un montage propre, lisible et sécurisé.",
         "intro": "Nos équipes organisent le montage sur site avec une méthode claire: réception du matériel, implantation, assemblage, alignement, ancrage et vérification avant exploitation.",
-        "stats": [["Terrain", "Équipe OMAK"], ["Contrôle", "Alignement"], ["Fin", "Mise en service"]],
+        "stats": [
+          [
+            "Terrain",
+            "Équipe OMAK"
+          ],
+          [
+            "Contrôle",
+            "Alignement"
+          ],
+          [
+            "Fin",
+            "Mise en service"
+          ]
+        ],
         "deliverables": [
           "Organisation de l'intervention et zones de montage",
           "Assemblage des montants, lisses, tablettes ou plateformes",
@@ -742,9 +1115,18 @@
           "Limite l'impact sur l'activité du client"
         ],
         "process": [
-          ["Préparation", "Planning, réception matériel et repérage des zones."],
-          ["Montage", "Assemblage par étapes avec contrôle des niveaux."],
-          ["Réception", "Vérification, nettoyage visuel et mise en service."]
+          [
+            "Préparation",
+            "Planning, réception matériel et repérage des zones."
+          ],
+          [
+            "Montage",
+            "Assemblage par étapes avec contrôle des niveaux."
+          ],
+          [
+            "Réception",
+            "Vérification, nettoyage visuel et mise en service."
+          ]
         ]
       },
       "controle-installations": {
@@ -754,7 +1136,20 @@
         "caption": "Inspection, points de risque et recommandations.",
         "headline": "Contrôler pour exploiter avec confiance.",
         "intro": "Le contrôle permet d'identifier les risques visibles: impacts, déformations, protections manquantes, ancrages, lisibilité des allées et état général des structures.",
-        "stats": [["Objectif", "Prévention"], ["Focus", "Sécurité"], ["Résultat", "Plan d'action"]],
+        "stats": [
+          [
+            "Objectif",
+            "Prévention"
+          ],
+          [
+            "Focus",
+            "Sécurité"
+          ],
+          [
+            "Résultat",
+            "Plan d'action"
+          ]
+        ],
         "deliverables": [
           "Inspection visuelle des structures et protections",
           "Identification des zones sensibles ou endommagées",
@@ -768,9 +1163,18 @@
           "Donne une vision claire des actions à prévoir"
         ],
         "process": [
-          ["Visite", "Parcours des zones, allées, montants et protections."],
-          ["Diagnostic", "Repérage des anomalies et priorisation."],
-          ["Action", "Proposition de correction, remplacement ou ajout."]
+          [
+            "Visite",
+            "Parcours des zones, allées, montants et protections."
+          ],
+          [
+            "Diagnostic",
+            "Repérage des anomalies et priorisation."
+          ],
+          [
+            "Action",
+            "Proposition de correction, remplacement ou ajout."
+          ]
         ]
       },
       "service-apres-vente": {
@@ -780,7 +1184,20 @@
         "caption": "Maintenance, pièces, ajustements et évolution.",
         "headline": "Un suivi utile après la mise en service.",
         "intro": "Après l'installation, OMAK accompagne l'évolution de votre stockage: ajout de niveaux, remplacement de pièces, protections, adaptation aux nouveaux flux et interventions correctives.",
-        "stats": [["Support", "Local"], ["Besoin", "Pièces & suivi"], ["Durée", "Relation long terme"]],
+        "stats": [
+          [
+            "Support",
+            "Local"
+          ],
+          [
+            "Besoin",
+            "Pièces & suivi"
+          ],
+          [
+            "Durée",
+            "Relation long terme"
+          ]
+        ],
         "deliverables": [
           "Ajout ou remplacement d'accessoires de rayonnage",
           "Intervention sur éléments endommagés",
@@ -794,9 +1211,18 @@
           "Facilite la maintenance et la continuité d'activité"
         ],
         "process": [
-          ["Demande", "Identification du besoin ou du problème rencontré."],
-          ["Solution", "Choix des pièces, accessoires ou correction adaptée."],
-          ["Suivi", "Intervention, contrôle et conseil pour la suite."]
+          [
+            "Demande",
+            "Identification du besoin ou du problème rencontré."
+          ],
+          [
+            "Solution",
+            "Choix des pièces, accessoires ou correction adaptée."
+          ],
+          [
+            "Suivi",
+            "Intervention, contrôle et conseil pour la suite."
+          ]
         ]
       }
     }

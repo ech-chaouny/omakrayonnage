@@ -31,8 +31,10 @@ const icons = {
 };
 
 const metrics = [
-  { icon: icons.warehouse, pre: "+", n: 90 },
+  { icon: icons.workflow, pre: "+", n: 10 },
+  { icon: icons.warehouse, pre: "+", n: 647 },
   { icon: icons.alliance, pre: "", n: 2 },
+  { icon: icons.warehouse, pre: "", n: 1 },
   { icon: icons.workflow, pre: "", n: 6 },
 ];
 
@@ -57,10 +59,10 @@ export default function Stats() {
           </Reveal>
         </div>
 
-        <div className="grid gap-3 md:grid-cols-3 md:gap-5">
+        <div className="grid gap-3 md:grid-cols-2 md:gap-5 lg:grid-cols-6">
           {metrics.map((s, index) => (
-            <Reveal key={index}>
-              <article className="group relative min-h-[220px] overflow-hidden rounded-[24px] border border-black/10 bg-white p-5 shadow-[0_20px_70px_rgba(17,19,21,.07)] md:min-h-[310px] md:rounded-[30px] md:p-7">
+            <Reveal key={index} className={index < 3 ? "lg:col-span-2" : "lg:col-span-3"}>
+              <article className="group relative h-full min-h-[220px] overflow-hidden rounded-[24px] border border-black/10 bg-white p-5 shadow-[0_20px_70px_rgba(17,19,21,.07)] md:min-h-[310px] md:rounded-[30px] md:p-7">
                 <div className="pointer-events-none absolute -right-16 -top-16 h-[140px] w-[140px] rounded-full bg-orange/10 transition-transform duration-500 group-hover:scale-125 md:h-[168px] md:w-[168px]" />
                 <div className="relative flex items-start justify-between gap-4">
                   <div className="grid h-12 w-12 place-items-center rounded-[16px] bg-orange text-white shadow-[0_16px_34px_rgba(242,72,28,.28)] md:h-16 md:w-16 md:rounded-[20px]">

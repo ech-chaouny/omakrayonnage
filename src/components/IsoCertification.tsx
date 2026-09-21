@@ -4,6 +4,7 @@ import Reveal from "./Reveal";
 export default function IsoCertification() {
   const t = useTranslations("iso");
   const points = t.raw("points") as Array<[string, string, string]>;
+  const standards = t.raw("standards") as Array<[string, string]>;
 
   return (
     <section className="px-[max(16px,4vw)] pb-12 md:px-[max(22px,4vw)] md:pb-24">
@@ -44,6 +45,30 @@ export default function IsoCertification() {
           </div>
         </div>
       </Reveal>
+      <div className="mx-auto mt-8 max-w-[1240px] md:mt-12">
+        <Reveal>
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
+            <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full md:h-28 md:w-28">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/img/ce-badge.jpg" alt="Marquage CE" className="h-full w-full scale-[1.14] object-cover" />
+            </div>
+            <div>
+              <h2 className="text-[14px] font-bold uppercase tracking-[.14em] text-orange md:text-[17px]">{t("standardsTitle")}</h2>
+              <p className="mt-3 max-w-[85ch] text-[14px] font-medium leading-[1.65] text-ink2 md:text-[16px]">{t("standardsIntro")}</p>
+            </div>
+          </div>
+        </Reveal>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 md:mt-8 md:gap-5 lg:grid-cols-4">
+          {standards.map(([code, description]) => (
+            <Reveal key={code}>
+              <article className="h-full rounded-[22px] border border-black/10 bg-white p-5 shadow-[0_12px_40px_rgba(17,19,21,.04)] md:p-6">
+                <h3 dir="ltr" className="font-nb text-[24px] font-bold tracking-[-.03em] text-ink">{code}</h3>
+                <p className="mt-3 text-[14px] leading-[1.6] text-ink2">{description}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

@@ -12,15 +12,14 @@ type Props = {
 };
 
 const departments = [
-  { key: "direction", phone: "+212 5 22 66 46 41", tel: "+212522664641", email: "k.elabbas@omakrayonnage.com" },
-  { key: "admin", phone: "+212 6 62 04 67 33", tel: "+212662046733", email: "b.fatimazahra@omakrayonnage.com" },
-  { key: "commercial", phone: "+212 6 45 12 27 27", tel: "+212645122727", email: "commercial@omakrayonnage.com" },
-  { key: "technical", phone: "+212 6 61 48 40 94", tel: "+212661484094", email: "o.rachid@omakrayonnage.com" },
-  { key: "general", phone: "+212 5 22 66 46 41", tel: "+212522664641", email: "contact@omakrayonnage.com" },
+  { name: "Abdelghani Ennaciri", role: "Directeur commercial", phone: "06 74 02 79 32", tel: "+212674027932", email: "abdelghani.ennaciri@omakrayonnage.com" },
+  { name: "Mohammed Ksir", role: "Directeur général", phone: "06 61 51 27 58", tel: "+212661512758", email: "mohammed.ksir@omakrayonnage.com" },
+  { name: "Amine Omari", role: "Responsable commercial", phone: "06 62 50 02 31", tel: "+212662500231", email: "amine.omari@omakrayonnage.com" },
+  { name: "Redouane Bakir", role: "Responsable qualité", phone: "06 29 39 42 73", tel: "+212629394273", email: "redouane.bakir@omakrayonnage.com" },
 ] as const;
 
-const featuredDepartment = departments[2];
-const supportDepartments = [departments[0], departments[1], departments[3], departments[4]];
+const featuredDepartment = departments[0];
+const supportDepartments = [departments[1], departments[2], departments[3]];
 const mapEmbedUrl =
   "https://www.google.com/maps?q=OMAK%20Service%20Bd%20Attaka%20Casablanca%2022580%20Maroc&output=embed";
 const mapDirectionsUrl =
@@ -95,7 +94,7 @@ function ContactContent() {
                 <div className="omak-dark-pattern rounded-[22px] p-5 text-white md:rounded-[24px] md:p-8 lg:p-10">
                   <Reveal>
                     <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("hero.eyebrow")}</p>
-                    <h1 className="mt-4 max-w-[15ch] text-[34px] font-semibold leading-[1] tracking-[-.03em] md:text-[clamp(34px,4.2vw,56px)]">
+                    <h1 className="font-nb mt-4 max-w-[15ch] text-[34px] font-semibold leading-[1] tracking-[-.03em] md:text-[clamp(34px,4.2vw,56px)]">
                       {t("hero.title")}
                     </h1>
                     <p className="mt-4 max-w-[58ch] text-[14px] font-medium leading-[1.65] text-white/66 md:mt-5 md:text-[15px]">{t("hero.intro")}</p>
@@ -122,10 +121,10 @@ function ContactContent() {
                       {t("hero.fillForm")} →
                     </a>
                     <a
-                      href="mailto:commercial@omakrayonnage.com"
+                      href="mailto:abdelghani.ennaciri@omakrayonnage.com"
                       className="rounded-full border border-white/14 px-5 py-3 text-[13px] font-bold text-white/78 transition-colors hover:text-white md:px-6 md:text-[14px]"
                     >
-                      commercial@omakrayonnage.com
+                      abdelghani.ennaciri@omakrayonnage.com
                     </a>
                   </div>
                 </div>
@@ -141,9 +140,9 @@ function ContactContent() {
                       />
                       <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_42%,rgba(8,8,14,.68))]" />
                       <div className="absolute bottom-3 left-3 right-3 rounded-[18px] border border-white/18 bg-white/92 p-3 text-ink shadow-[0_18px_44px_rgba(17,19,21,.16)] backdrop-blur-md md:bottom-4 md:left-4 md:right-4 md:rounded-[20px] md:p-4">
-                        <p className="text-[11px] font-bold uppercase tracking-[.18em] text-orange">{t("hero.sideService")}</p>
-                        <a href="tel:+212645122727" className="mt-1 block text-[16px] font-semibold tracking-[-.01em] md:text-[18px]">
-                          +212 6 45 12 27 27
+                        <p className="text-[11px] font-bold uppercase tracking-[.18em] text-orange">{featuredDepartment.role}</p>
+                        <a href={`tel:${featuredDepartment.tel}`} className="mt-1 block text-[16px] font-semibold tracking-[-.01em] md:text-[18px]">
+                          {featuredDepartment.phone}
                         </a>
                       </div>
                     </div>
@@ -179,7 +178,7 @@ function ContactContent() {
           <div className="mx-auto grid max-w-[1240px] gap-6 lg:grid-cols-[1.05fr_.95fr]">
             <Reveal>
               <form
-                action="mailto:commercial@omakrayonnage.com"
+                action="mailto:abdelghani.ennaciri@omakrayonnage.com"
                 method="post"
                 encType="text/plain"
                 className="rounded-[24px] border border-black/10 bg-white p-4 shadow-[0_18px_60px_rgba(17,19,21,.07)] md:rounded-[30px] md:p-7"
@@ -252,9 +251,9 @@ function ContactContent() {
                   <article className="omak-dark-pattern mt-5 overflow-hidden rounded-[22px] p-4 text-white shadow-[0_18px_46px_rgba(17,19,21,.16)] md:mt-6 md:rounded-[24px] md:p-5">
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <p className="text-[10px] font-bold uppercase tracking-[.22em] text-orange">{t("coords.featuredEyebrow")}</p>
+                        <p className="text-[10px] font-bold uppercase tracking-[.22em] text-orange">{featuredDepartment.role}</p>
                         <h3 className="mt-2 text-[21px] font-semibold leading-none tracking-[-.02em] md:text-[24px]">
-                          {t(`departments.${featuredDepartment.key}`)}
+                          {featuredDepartment.name}
                         </h3>
                       </div>
                       <span className="rounded-full border border-white/12 bg-white/[.08] px-3 py-2 text-[10px] font-bold uppercase tracking-[.14em] text-white/64">
@@ -283,7 +282,7 @@ function ContactContent() {
                   <div className="mt-4 grid gap-3">
                     {supportDepartments.map((item, index) => (
                       <article
-                        key={item.key}
+                        key={item.name}
                         className="group rounded-[18px] border border-black/10 bg-bg/80 p-3.5 transition-all hover:border-orange/35 hover:bg-white hover:shadow-[0_14px_34px_rgba(17,19,21,.07)] md:rounded-[20px] md:p-4"
                       >
                         <div className="flex items-start justify-between gap-4">
@@ -292,9 +291,14 @@ function ContactContent() {
                               <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[14px] border border-black/10 bg-white text-orange transition-colors group-hover:border-orange/30">
                                 {index % 2 === 0 ? <PhoneIcon /> : <MailIcon />}
                               </span>
-                              <h3 className="text-[12px] font-bold uppercase tracking-[.16em] text-ink">
-                                {t(`departments.${item.key}`)}
-                              </h3>
+                              <div className="min-w-0">
+                                <h3 className="text-[14px] font-bold tracking-[-.01em] text-ink">
+                                  {item.name}
+                                </h3>
+                                <p className="mt-0.5 text-[10px] font-bold uppercase tracking-[.16em] text-orange">
+                                  {item.role}
+                                </p>
+                              </div>
                             </div>
                             <div className="mt-4 grid gap-2 pl-12">
                               <a
@@ -353,7 +357,7 @@ function ContactContent() {
                       {t("map.directions")} →
                     </a>
                     <a
-                      href="tel:+212645122727"
+                      href={`tel:${featuredDepartment.tel}`}
                       className="rounded-full border border-white/14 px-5 py-3 text-[13px] font-bold text-white/78 transition-colors hover:text-white"
                     >
                       {t("map.call")}

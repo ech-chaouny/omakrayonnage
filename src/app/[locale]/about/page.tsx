@@ -32,11 +32,6 @@ const qualityIcons = [
   ),
 ];
 
-const aboutPartners = [
-  { key: "stow", name: "STOW", logo: "/partners/stow.svg" },
-  { key: "manorga", name: "MANORGA", logo: "/partners/manorga-black.png" },
-] as const;
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata.about" });
@@ -74,24 +69,24 @@ function AboutContent() {
       <main className="bg-bg text-ink">
         <section id="top" className="px-[max(16px,4vw)] pb-8 pt-24 md:px-[max(22px,4vw)] md:pb-14 md:pt-30">
           <div className="mx-auto max-w-[1240px]">
-            <div className="grid overflow-hidden rounded-[24px] bg-[#08080e] shadow-[0_24px_80px_rgba(17,19,21,.14)] ring-1 ring-black/10 md:rounded-[30px] lg:grid-cols-[.9fr_1.1fr]">
+            <div className="grid overflow-hidden rounded-[24px] bg-[#08080e] shadow-[0_24px_80px_rgba(17,19,21,.14)] ring-1 ring-black/10 md:rounded-[30px] lg:grid-cols-[1.15fr_.85fr]">
               <div className="omak-dark-pattern flex flex-col justify-between gap-6 p-5 text-white md:gap-8 md:p-[max(22px,3.6vw)]">
                 <Reveal>
                   <div>
                     <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("hero.eyebrow")}</p>
-                    <h1 className="font-nb mt-4 max-w-[14ch] text-[34px] font-semibold leading-[.98] tracking-[-.03em] md:text-[clamp(34px,4.8vw,62px)]">
+                    <h1 className="font-nb mt-4 text-[34px] font-semibold leading-[.98] tracking-[-.03em] md:text-[clamp(34px,4.8vw,62px)]">
                       {t("hero.title")}
                     </h1>
-                    <p className="mt-4 max-w-[52ch] text-[14px] font-medium leading-[1.6] text-white/64 md:mt-5 md:text-[15px]">{t("hero.intro")}</p>
+                    <p className="mt-4 text-[14px] font-medium leading-[1.6] text-white/64 md:mt-5 md:text-[15px]">{t("hero.intro")}</p>
                   </div>
                 </Reveal>
 
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-4">
                   {figures.map(([value, label]) => (
-                    <Reveal key={label}>
-                      <div className="rounded-[16px] border border-white/10 bg-white/[.06] p-2.5 md:p-3">
-                        <div className="font-nb text-[22px] font-bold leading-none text-orange md:text-[26px]">{value}</div>
-                        <div className="mt-2 text-[10px] font-bold uppercase tracking-[.12em] text-white/58">{label}</div>
+                    <Reveal key={label} className="flex">
+                      <div className="flex w-full flex-col rounded-[16px] border border-white/10 bg-white/[.06] p-2.5 md:p-3">
+                        <div className="font-nb whitespace-nowrap text-[22px] font-bold leading-none tracking-[-.02em] text-orange md:text-[24px]">{value}</div>
+                        <div className="mt-auto pt-2 text-[10px] font-bold uppercase tracking-[.12em] text-white/58">{label}</div>
                       </div>
                     </Reveal>
                   ))}
@@ -107,10 +102,6 @@ function AboutContent() {
                     className="h-full min-h-[260px] w-full object-cover lg:min-h-[340px]"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,8,14,.35),transparent_50%)]" />
-                  <div className="absolute bottom-4 left-4 rounded-[16px] border border-white/14 bg-black/42 px-3 py-2 text-white backdrop-blur-md md:bottom-5 md:left-5 md:rounded-[18px] md:px-4 md:py-3">
-                    <div className="text-[10px] font-bold uppercase tracking-[.18em] text-orange">{t("hero.badge")}</div>
-                    <div className="mt-1 text-[14px] font-bold">{t("hero.badgeText")}</div>
-                  </div>
                 </div>
               </Reveal>
             </div>
@@ -180,44 +171,6 @@ function AboutContent() {
         </section>
 
         <section className="px-[max(16px,4vw)] py-6 md:px-[max(22px,4vw)] md:py-14">
-          <div className="mx-auto max-w-[1240px] overflow-hidden rounded-[24px] bg-white shadow-[0_20px_70px_rgba(17,19,21,.08)] ring-1 ring-black/10 md:rounded-[30px]">
-            <div className="grid lg:grid-cols-[1.05fr_.95fr]">
-              <Reveal className="reveal-img">
-                <div className="h-full min-h-[260px] md:min-h-[340px]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/img/realisation-palettier-clean.png"
-                    alt={t("method.imageAlt")}
-                    className="h-full min-h-[260px] w-full object-cover md:min-h-[340px]"
-                  />
-                </div>
-              </Reveal>
-              <div className="p-5 md:p-[max(22px,3.6vw)]">
-                <Reveal>
-                  <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("method.eyebrow")}</p>
-                  <h2 className="mt-4 max-w-[14ch] text-[28px] font-semibold leading-[1] tracking-[-.025em] md:text-[clamp(30px,4vw,52px)]">
-                    {t("method.title")}
-                  </h2>
-                  <p className="mt-5 text-[15px] font-medium leading-[1.6] text-ink2">{t("method.intro")}</p>
-                </Reveal>
-                <div className="mt-6 grid gap-3">
-                  {services.map((service, index) => (
-                    <Reveal key={service}>
-                      <div className="flex items-center gap-3 rounded-[16px] border border-black/10 bg-bg p-3">
-                        <span className="font-nb grid h-10 w-10 shrink-0 place-items-center rounded-[14px] bg-ink text-[15px] font-bold text-white">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-[14px] font-bold text-ink">{service}</span>
-                      </div>
-                    </Reveal>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-[max(16px,4vw)] py-6 md:px-[max(22px,4vw)] md:py-14">
           <div className="mx-auto max-w-[1240px]">
             <Reveal>
               <div className="mb-8 text-center">
@@ -254,49 +207,6 @@ function AboutContent() {
           </div>
         </section>
 
-        <section className="px-[max(16px,4vw)] py-6 md:px-[max(22px,4vw)] md:py-14">
-          <div className="omak-dark-pattern mx-auto max-w-[1240px] overflow-hidden rounded-[24px] p-4 text-white shadow-[0_20px_70px_rgba(17,19,21,.12)] md:rounded-[30px] md:p-[max(20px,3.2vw)]">
-            <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-              <Reveal>
-                <div>
-                  <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("partners.eyebrow")}</p>
-                  <h2 className="mt-4 max-w-[16ch] text-[28px] font-semibold leading-[1] tracking-[-.025em] md:text-[clamp(30px,4vw,52px)]">
-                    {t("partners.title")}
-                  </h2>
-                </div>
-              </Reveal>
-              <Reveal>
-                <p className="max-w-[52ch] text-[15px] font-medium leading-[1.6] text-white/62">{t("partners.intro")}</p>
-              </Reveal>
-            </div>
-            <div className="grid gap-5 md:grid-cols-2">
-              {aboutPartners.map((partner) => (
-                <Reveal key={partner.name}>
-                  <article className="rounded-[22px] bg-white p-4 text-ink shadow-[0_16px_44px_rgba(0,0,0,.18)] md:rounded-[26px] md:p-5">
-                    <div className="grid h-24 place-items-center rounded-[18px] border border-black/10 bg-bg md:h-28 md:rounded-[20px]">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={partner.logo}
-                        alt={`${partner.name} logo`}
-                        className={`w-auto object-contain ${partner.name === "MANORGA" ? "h-18" : "h-12"}`}
-                      />
-                    </div>
-                    <div className="mt-5 flex flex-wrap items-center gap-2">
-                      <span className="rounded-full bg-orange px-4 py-2 text-[11px] font-extrabold uppercase tracking-[.14em] text-white">
-                        {t(`partners.list.${partner.key}.role`)}
-                      </span>
-                    </div>
-                    <h3 className="font-nb mt-5 text-[30px] font-bold leading-none tracking-[-.03em] md:text-[clamp(30px,3.4vw,46px)]">
-                      {partner.name}
-                    </h3>
-                    <p className="mt-4 text-[15px] font-medium leading-[1.6] text-ink2">{t(`partners.list.${partner.key}.text`)}</p>
-                  </article>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="px-[max(16px,4vw)] py-8 md:px-[max(22px,4vw)] md:py-16">
           <div className="mx-auto max-w-[1040px] text-center">
             <Reveal>
@@ -312,12 +222,6 @@ function AboutContent() {
                 >
                   {t("cta.quote")} →
                 </Link>
-                <a
-                  href="tel:+212662500231"
-                  className="rounded-full border border-black/15 bg-white px-6 py-3 text-[14px] font-semibold text-ink transition-colors hover:border-black/40 md:px-8 md:py-4 md:text-[16px]"
-                >
-                  {t("cta.phone")}
-                </a>
               </div>
             </Reveal>
           </div>

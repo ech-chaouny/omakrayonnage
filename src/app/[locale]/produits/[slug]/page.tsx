@@ -69,12 +69,11 @@ function ProductDetailContent({ product, related }: { product: Product; related:
   const t = useTranslations("productDetail");
   const tp = useTranslations("catalog.products");
   const slug = product.slug;
+  const isHeavyRacking = slug === "rayonnage-lourd";
 
   const stats = tp.raw(`${slug}.stats`) as Array<[string, string]>;
   const uses = tp.raw(`${slug}.uses`) as string[];
   const advantages = tp.raw(`${slug}.advantages`) as string[];
-  const specs = tp.raw(`${slug}.specs`) as Array<[string, string]>;
-  const steps = tp.raw(`${slug}.steps`) as Array<[string, string]>;
 
   return (
     <>
@@ -85,7 +84,7 @@ function ProductDetailContent({ product, related }: { product: Product; related:
             <div className="grid gap-3 lg:grid-cols-[1fr_.92fr]">
               <div className="omak-dark-pattern rounded-[22px] p-5 text-white md:rounded-[24px] md:p-8 lg:p-10">
                 <Reveal>
-                  <Link href="/produits" className="text-[12px] font-bold uppercase tracking-[.18em] text-white/50 transition-colors hover:text-white">
+                  <Link href="/#produits" className="text-[12px] font-bold uppercase tracking-[.18em] text-white/50 transition-colors hover:text-white">
                     ← {t("back")}
                   </Link>
                   <p className="mt-7 text-[12px] font-bold uppercase tracking-[.24em] text-orange md:mt-9">{tp(`${slug}.eyebrow`)}</p>
@@ -114,7 +113,7 @@ function ProductDetailContent({ product, related }: { product: Product; related:
                     {t("quote")} →
                   </Link>
                   <Link
-                    href="/produits"
+                    href="/#produits"
                     className="rounded-full border border-white/14 px-5 py-3 text-[13px] font-bold text-white/78 transition-colors hover:text-white md:px-6 md:text-[14px]"
                   >
                     {t("viewRange")}
@@ -138,18 +137,18 @@ function ProductDetailContent({ product, related }: { product: Product; related:
         </section>
 
         <section className="px-[max(16px,4vw)] py-6 md:px-[max(22px,4vw)] md:py-16">
-          <div className="mx-auto grid max-w-[1240px] gap-6 lg:grid-cols-[.9fr_1.1fr]">
+          <div className={`mx-auto grid max-w-[1240px] gap-6 ${isHeavyRacking ? "" : "lg:grid-cols-[.9fr_1.1fr]"}`}>
             <Reveal>
               <div className="rounded-[24px] border border-black/10 bg-white p-4 shadow-[0_18px_60px_rgba(17,19,21,.07)] md:rounded-[30px] md:p-7">
                 <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("usage.eyebrow")}</p>
-                <h2 className="mt-3 max-w-[12ch] text-[28px] font-semibold leading-[1] tracking-[-.03em] md:text-[clamp(30px,4vw,48px)]">
-                  {t("usage.title")}
+                <h2 className={`mt-3 ${isHeavyRacking ? "max-w-[30ch]" : "max-w-[12ch]"} text-[28px] font-semibold leading-[1] tracking-[-.03em] md:text-[clamp(30px,4vw,48px)]`}>
+                  {isHeavyRacking ? tp(`${slug}.usageTitle`) : t("usage.title")}
                 </h2>
                 <div className="mt-5 grid gap-3 md:mt-7">
-                  {uses.map((item) => (
+                  {uses.map((item, index) => (
                     <div key={item} className="flex gap-3 rounded-[16px] border border-black/10 bg-bg p-3 text-[13px] font-semibold leading-[1.45] text-ink2 md:rounded-[18px] md:p-4 md:text-[14px]">
                       <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-orange text-white">
-                        <MiniCheck />
+                        {isHeavyRacking ? String(index + 1).padStart(2, "0") : <MiniCheck />}
                       </span>
                       {item}
                     </div>
@@ -158,7 +157,7 @@ function ProductDetailContent({ product, related }: { product: Product; related:
               </div>
             </Reveal>
 
-            <Reveal>
+            {!isHeavyRacking && <Reveal>
               <div className="rounded-[24px] border border-black/10 bg-white p-4 shadow-[0_18px_60px_rgba(17,19,21,.07)] md:rounded-[30px] md:p-7">
                 <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("advantages.eyebrow")}</p>
                 <h2 className="mt-3 text-[28px] font-semibold leading-[1] tracking-[-.03em] md:text-[clamp(30px,4vw,48px)]">
@@ -175,50 +174,7 @@ function ProductDetailContent({ product, related }: { product: Product; related:
                   ))}
                 </div>
               </div>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className="px-[max(16px,4vw)] py-6 md:px-[max(22px,4vw)] md:py-16">
-          <div className="mx-auto grid max-w-[1240px] gap-6 lg:grid-cols-[.9fr_1.1fr]">
-            <Reveal>
-              <div className="rounded-[24px] border border-black/10 bg-white p-4 shadow-[0_18px_60px_rgba(17,19,21,.07)] md:rounded-[30px] md:p-7">
-                <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("details.eyebrow")}</p>
-                <h2 className="mt-3 text-[28px] font-semibold leading-[1] tracking-[-.03em] md:text-[clamp(30px,4vw,48px)]">
-                  {t("details.title")}
-                </h2>
-                <div className="mt-5 divide-y divide-black/10 overflow-hidden rounded-[20px] border border-black/10 md:mt-7 md:rounded-[22px]">
-                  {specs.map(([label, value]) => (
-                    <div key={label} className="grid gap-2 bg-bg px-4 py-3 sm:grid-cols-[150px_1fr] md:px-5 md:py-4">
-                      <span className="text-[11px] font-bold uppercase tracking-[.16em] text-orange">{label}</span>
-                      <span className="text-[13px] font-bold text-ink md:text-[14px]">{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal>
-              <div className="omak-dark-pattern rounded-[24px] p-4 text-white shadow-[0_20px_70px_rgba(17,19,21,.12)] md:rounded-[30px] md:p-7">
-                <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("method.eyebrow")}</p>
-                <h2 className="mt-3 text-[28px] font-semibold leading-[1] tracking-[-.03em] md:text-[clamp(30px,4vw,48px)]">
-                  {t("method.title")}
-                </h2>
-                <div className="mt-5 grid gap-3 md:mt-7">
-                  {steps.map(([title, text], index) => (
-                    <div key={title} className="grid gap-3 rounded-[18px] border border-white/10 bg-white/[.055] p-3 sm:grid-cols-[72px_1fr] md:gap-4 md:rounded-[20px] md:p-4">
-                      <span className="font-nb text-[28px] font-bold leading-none text-orange md:text-[34px]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span>
-                        <span className="block text-[16px] font-semibold text-white md:text-[18px]">{title}</span>
-                        <span className="mt-2 block text-[13px] font-medium leading-[1.55] text-white/58 md:text-[14px]">{text}</span>
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
+            </Reveal>}
           </div>
         </section>
 
@@ -234,7 +190,7 @@ function ProductDetailContent({ product, related }: { product: Product; related:
                 </div>
               </Reveal>
               <Reveal>
-                <Link href="/produits" className="text-[13px] font-bold uppercase tracking-[.1em] text-orange">
+                <Link href="/#produits" className="text-[13px] font-bold uppercase tracking-[.1em] text-orange">
                   {t("compare.catalog")} →
                 </Link>
               </Reveal>

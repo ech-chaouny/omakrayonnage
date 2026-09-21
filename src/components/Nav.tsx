@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { products } from "@/lib/products";
 import { services } from "@/lib/services";
 import Logo from "./Logo";
@@ -12,8 +12,15 @@ export default function Nav() {
   const tp = useTranslations("catalog.products");
   const ts = useTranslations("catalog.services");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   const closeMobileMenu = () => setMobileOpen(false);
+
+  // Page active = lien coloré en orange au lieu de blanc
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+  const linkCls = (href: string) =>
+    `transition-colors ${isActive(href) ? "text-orange" : "hover:text-white"}`;
 
   return (
     <nav className="fixed inset-x-0 top-3 z-50 px-3 md:top-5 md:px-4">
@@ -22,16 +29,20 @@ export default function Nav() {
           <Logo light className="h-8 md:h-11" />
         </Link>
         <div className="hidden items-center gap-7 text-[14px] font-semibold text-white/80 md:flex">
-          <Link href="/" className="transition-colors hover:text-white">
+          <Link href="/" aria-current={isActive("/") ? "page" : undefined} className={linkCls("/")}>
             {t("home")}
           </Link>
-          <Link href="/about" className="transition-colors hover:text-white">
+          <Link href="/about" aria-current={isActive("/about") ? "page" : undefined} className={linkCls("/about")}>
             {t("about")}
           </Link>
           <div className="group relative flex h-16 items-center" aria-haspopup="true">
-            <Link href="/produits" className="transition-colors hover:text-white group-hover:text-white">
+            <button
+              type="button"
+              aria-haspopup="true"
+              className="cursor-default text-white/80 transition-colors hover:text-white group-hover:text-white"
+            >
               {t("products")}
-            </Link>
+            </button>
             <div className="invisible absolute left-1/2 top-full w-[680px] max-w-[calc(100vw-32px)] -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition-all duration-200 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
               <div className="overflow-hidden rounded-[26px] border border-white/10 bg-[rgba(8,8,12,.94)] p-3 shadow-[0_24px_80px_rgba(0,0,0,.42)] backdrop-blur-xl">
                 <div className="flex items-center justify-between gap-4 px-3 py-2">
@@ -40,7 +51,7 @@ export default function Nav() {
                     <p className="mt-1 text-[13px] font-medium text-white/56">{t("productsMenu.subtitle")}</p>
                   </div>
                   <Link
-                    href="/produits"
+                    href="/#produits"
                     className="shrink-0 rounded-full border border-white/12 px-4 py-2 text-[11px] font-bold uppercase tracking-[.12em] text-white/72 transition-colors hover:border-orange hover:text-white"
                   >
                     {t("productsMenu.all")}
@@ -77,7 +88,11 @@ export default function Nav() {
             </div>
           </div>
           <div className="group relative flex h-16 items-center" aria-haspopup="true">
-            <Link href="/services" className="transition-colors hover:text-white group-hover:text-white">
+            <Link
+              href="/services"
+              aria-current={isActive("/services") ? "page" : undefined}
+              className={`${linkCls("/services")} ${isActive("/services") ? "" : "group-hover:text-white"}`}
+            >
               {t("services")}
             </Link>
             <div className="invisible absolute left-1/2 top-full w-[520px] max-w-[calc(100vw-32px)] -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition-all duration-200 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
@@ -118,7 +133,7 @@ export default function Nav() {
               </div>
             </div>
           </div>
-          <Link href="/contact" className="transition-colors hover:text-white">
+          <Link href="/contact" aria-current={isActive("/contact") ? "page" : undefined} className={linkCls("/contact")}>
             {t("contact")}
           </Link>
         </div>
@@ -168,7 +183,7 @@ export default function Nav() {
               {[
                 ["/", t("home")],
                 ["/about", t("about")],
-                ["/produits", t("products")],
+                ["/#produits", t("products")],
                 ["/services", t("services")],
                 ["/contact", t("contact")],
               ].map(([href, label]) => (
@@ -176,7 +191,10 @@ export default function Nav() {
                   key={href}
                   href={href}
                   onClick={closeMobileMenu}
-                  className="rounded-[18px] px-4 py-3 text-[15px] font-bold text-white/82 transition-colors hover:bg-white/[.07] hover:text-white"
+                  aria-current={isActive(href) ? "page" : undefined}
+                  className={`rounded-[18px] px-4 py-3 text-[15px] font-bold transition-colors hover:bg-white/[.07] ${
+                    isActive(href) ? "bg-white/[.06] text-orange" : "text-white/82 hover:text-white"
+                  }`}
                 >
                   {label}
                 </Link>
@@ -184,7 +202,7 @@ export default function Nav() {
             </div>
             <div className="mt-2 grid grid-cols-2 gap-2 border-t border-white/10 pt-2">
               <Link
-                href="/produits"
+                href="/#produits"
                 onClick={closeMobileMenu}
                 className="rounded-[18px] border border-white/10 bg-white/[.055] px-3 py-3 text-[12px] font-extrabold uppercase tracking-[.12em] text-orange"
               >
