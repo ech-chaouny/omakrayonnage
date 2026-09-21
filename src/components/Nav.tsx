@@ -61,11 +61,16 @@ export default function Nav() {
                   </Link>
                 </div>
                 <div className="mt-2 grid gap-2 sm:grid-cols-2">
-                  {products.map((product) => (
+                  {products.map((product) => {
+                    const active = pathname === `/produits/${product.slug}`;
+                    return (
                     <Link
                       key={product.slug}
                       href={`/produits/${product.slug}`}
-                      className="group/item grid grid-cols-[82px_1fr] gap-3 rounded-[18px] border border-white/8 bg-white/[.045] p-2.5 transition-all hover:border-orange/45 hover:bg-white/[.08]"
+                      aria-current={active ? "page" : undefined}
+                      className={`group/item grid grid-cols-[82px_1fr] gap-3 rounded-[18px] border p-2.5 transition-all hover:border-orange/45 hover:bg-white/[.08] ${
+                        active ? "border-orange/60 bg-white/[.09]" : "border-white/8 bg-white/[.045]"
+                      }`}
                     >
                       <span className="relative h-[62px] overflow-hidden rounded-[14px] bg-white/8">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -77,7 +82,7 @@ export default function Nav() {
                         <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(8,8,12,.28))]" />
                       </span>
                       <span className="min-w-0 py-1">
-                        <span className="block truncate text-[14px] font-bold text-white transition-colors group-hover/item:text-orange">
+                        <span className={`block truncate text-[14px] font-bold transition-colors group-hover/item:text-orange ${active ? "text-orange" : "text-white"}`}>
                           {tp(`${product.slug}.navTitle`)}
                         </span>
                         <span className="mt-1 block text-[12px] font-medium leading-[1.35] text-white/52">
@@ -85,7 +90,8 @@ export default function Nav() {
                         </span>
                       </span>
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -113,17 +119,26 @@ export default function Nav() {
                   </Link>
                 </div>
                 <div className="mt-2 grid gap-2">
-                  {services.map((service, index) => (
+                  {services.map((service, index) => {
+                    const active = pathname === `/services/${service.slug}`;
+                    return (
                     <Link
                       key={service.slug}
                       href={`/services/${service.slug}`}
-                      className="group/item grid grid-cols-[48px_1fr] gap-3 rounded-[18px] border border-white/8 bg-white/[.045] p-3 transition-all hover:border-orange/45 hover:bg-white/[.08]"
+                      aria-current={active ? "page" : undefined}
+                      className={`group/item grid grid-cols-[48px_1fr] gap-3 rounded-[18px] border p-3 transition-all hover:border-orange/45 hover:bg-white/[.08] ${
+                        active ? "border-orange/60 bg-white/[.09]" : "border-white/8 bg-white/[.045]"
+                      }`}
                     >
-                      <span className="grid h-12 w-12 place-items-center rounded-[16px] border border-white/10 bg-white/[.06] font-nb text-[18px] font-bold text-orange">
+                      <span
+                        className={`grid h-12 w-12 place-items-center rounded-[16px] border font-nb text-[18px] font-bold ${
+                          active ? "border-orange bg-orange text-white" : "border-white/10 bg-white/[.06] text-orange"
+                        }`}
+                      >
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <span className="min-w-0">
-                        <span className="block truncate text-[14px] font-bold text-white transition-colors group-hover/item:text-orange">
+                        <span className={`block truncate text-[14px] font-bold transition-colors group-hover/item:text-orange ${active ? "text-orange" : "text-white"}`}>
                           {ts(`${service.slug}.navTitle`)}
                         </span>
                         <span className="mt-1 block text-[12px] font-medium leading-[1.35] text-white/52">
@@ -131,7 +146,8 @@ export default function Nav() {
                         </span>
                       </span>
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
