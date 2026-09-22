@@ -372,11 +372,21 @@ export default function Hero() {
           ref={frameRef}
           className="absolute inset-0 origin-center overflow-hidden bg-[#08080e] shadow-[0_18px_70px_rgba(17,19,21,.18)] will-change-transform"
         >
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            src="/img/hero-warehouse.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(40% 44% at 50% 52%, rgba(255,150,90,.16), transparent 64%), radial-gradient(66% 60% at 66% 40%, rgba(242,72,28,.20), transparent 60%), radial-gradient(55% 55% at 22% 74%, rgba(242,72,28,.10), transparent 62%), #08080e",
+                "radial-gradient(40% 44% at 50% 52%, rgba(255,150,90,.16), transparent 64%), radial-gradient(66% 60% at 66% 40%, rgba(242,72,28,.20), transparent 60%), radial-gradient(55% 55% at 22% 74%, rgba(242,72,28,.10), transparent 62%), rgba(8,8,14,.38)",
             }}
           />
           <div
@@ -387,7 +397,7 @@ export default function Hero() {
               backgroundSize: "92px 92px, 92px 92px, 100% 100%",
             }}
           />
-          <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
+          <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 h-full w-full opacity-0" aria-hidden="true" />
           <div
             className="pointer-events-none absolute inset-0"
             style={{
