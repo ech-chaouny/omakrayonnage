@@ -101,7 +101,9 @@ export default function ContactForm() {
         <div className="flex flex-wrap gap-2">
           {needs.map((need) => (
             <label key={need} className="cursor-pointer">
-              <input className="peer sr-only" type="checkbox" name="need" value={need} />
+              {/* "need[]" : PHP regroupe les cases cochées en tableau
+                  (avec "need" simple, seule la dernière serait transmise). */}
+              <input className="peer sr-only" type="checkbox" name="need[]" value={need} />
               <span className="block rounded-full border border-black/10 bg-bg px-4 py-2 text-[12px] font-bold text-ink2 transition-colors peer-checked:border-orange peer-checked:bg-orange peer-checked:text-white">
                 {need}
               </span>
