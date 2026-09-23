@@ -32,7 +32,7 @@ export default function Nav() {
   return (
     <nav className="fixed inset-x-0 top-3 z-50 px-3 md:top-5 md:px-4">
       <div className="relative mx-auto flex h-[58px] max-w-[1120px] items-center justify-between rounded-[28px] border border-white/12 bg-[linear-gradient(120deg,rgba(12,12,14,.94),rgba(22,22,26,.90)_48%,rgba(12,12,14,.86))] px-3 shadow-[0_18px_60px_rgba(0,0,0,.34)] backdrop-blur-xl md:h-16 md:px-6">
-        <Link href="/#top" aria-label="OMAK RAYONNAGE" onClick={closeMobileMenu}>
+        <Link href="/" aria-label="OMAK RAYONNAGE" onClick={closeMobileMenu}>
           <Logo light className="h-8 md:h-11" />
         </Link>
         <div className="hidden items-center gap-7 text-[14px] font-semibold text-white/80 md:flex">
