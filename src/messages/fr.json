@@ -603,7 +603,12 @@
         "SAV"
       ],
       "messagePlaceholder": "Votre besoin: dimensions, charges, surface, délai souhaité...",
-      "submit": "Envoyer la demande"
+      "submit": "Envoyer la demande",
+      "sending": "Envoi en cours…",
+      "successTitle": "Demande envoyée.",
+      "successText": "Merci, nous avons bien reçu votre demande. Notre équipe vous recontacte rapidement.",
+      "errorText": "L'envoi n'a pas abouti. Réessayez ou écrivez-nous directement à contact@omakrayonnage.com.",
+      "again": "Envoyer une autre demande"
     },
     "coords": {
       "eyebrow": "Coordonnées",

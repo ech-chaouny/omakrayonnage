@@ -6,6 +6,7 @@ import type { Locale } from "@/i18n/routing";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import ContactForm from "@/components/ContactForm";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -75,13 +76,9 @@ function CheckIcon() {
   );
 }
 
-const inputClass =
-  "h-[48px] w-full rounded-[15px] border border-black/10 bg-bg px-4 text-[14px] font-semibold text-ink outline-none transition-colors placeholder:text-ink2/55 focus:border-orange focus:bg-white md:h-[52px] md:rounded-[16px]";
-
 function ContactContent() {
   const t = useTranslations("contact");
   const highlights = t.raw("hero.highlights") as string[];
-  const needs = t.raw("form.needs") as string[];
 
   return (
     <>
@@ -177,59 +174,7 @@ function ContactContent() {
         <section id="devis" className="px-[max(16px,4vw)] py-6 md:px-[max(22px,4vw)] md:py-14">
           <div className="mx-auto grid max-w-[1240px] gap-6 lg:grid-cols-[1.05fr_.95fr]">
             <Reveal>
-              <form
-                action="mailto:abdelghani.ennaciri@omakrayonnage.com"
-                method="post"
-                encType="text/plain"
-                className="rounded-[24px] border border-black/10 bg-white p-4 shadow-[0_18px_60px_rgba(17,19,21,.07)] md:rounded-[30px] md:p-7"
-              >
-                <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-                  <div>
-                    <p className="text-[12px] font-bold uppercase tracking-[.24em] text-orange">{t("form.eyebrow")}</p>
-                    <h2 className="mt-3 text-[28px] font-semibold leading-[1] tracking-[-.025em] md:text-[clamp(28px,3.6vw,44px)]">
-                      {t("form.title")}
-                    </h2>
-                  </div>
-                  <span className="rounded-full border border-black/10 bg-bg px-4 py-2 text-[11px] font-bold uppercase tracking-[.12em] text-ink2">
-                    {t("form.duration")}
-                  </span>
-                </div>
-
-                <div className="mt-5 grid gap-3 sm:grid-cols-2 md:mt-7">
-                  <input className={`${inputClass} sm:col-span-2`} name="name" placeholder={t("form.fields.name")} required />
-                  <input className={inputClass} name="phone" placeholder={t("form.fields.phone")} required />
-                  <input className={inputClass} type="email" name="email" placeholder={t("form.fields.email")} required />
-                  <input className={inputClass} name="company" placeholder={t("form.fields.company")} />
-                  <input className={inputClass} name="city" placeholder={t("form.fields.city")} />
-                </div>
-
-                <div className="mt-4">
-                  <p className="mb-3 text-[12px] font-bold uppercase tracking-[.16em] text-ink2">{t("form.needTypeLabel")}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {needs.map((need) => (
-                      <label key={need} className="cursor-pointer">
-                        <input className="peer sr-only" type="checkbox" name="need" value={need} />
-                        <span className="block rounded-full border border-black/10 bg-bg px-4 py-2 text-[12px] font-bold text-ink2 transition-colors peer-checked:border-orange peer-checked:bg-orange peer-checked:text-white">
-                          {need}
-                        </span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <textarea
-                  className="mt-4 min-h-28 w-full resize-none rounded-[18px] border border-black/10 bg-bg px-4 py-4 text-[14px] font-semibold leading-[1.5] text-ink outline-none transition-colors placeholder:text-ink2/55 focus:border-orange focus:bg-white md:min-h-32"
-                  name="message"
-                  placeholder={t("form.messagePlaceholder")}
-                />
-
-                <button
-                  type="submit"
-                  className="mt-5 w-full rounded-full bg-orange px-7 py-3.5 text-[14px] font-bold text-white shadow-[0_12px_34px_rgba(242,72,28,.32)] transition-colors hover:bg-orangedark md:px-8 md:py-4 md:text-[15px]"
-                >
-                  {t("form.submit")} →
-                </button>
-              </form>
+              <ContactForm />
             </Reveal>
 
             <Reveal>
