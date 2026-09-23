@@ -17,8 +17,15 @@ export default function Nav() {
   const closeMobileMenu = () => setMobileOpen(false);
 
   // Page active = lien coloré en orange au lieu de blanc
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+  // `trailingSlash: true` fait que l'URL courante finit par "/" ("/produits/x/").
+  // On normalise des deux côtés, sinon aucune comparaison exacte ne correspond.
+  const stripSlash = (p: string) => p.replace(/\/+$/, "") || "/";
+  const currentPath = stripSlash(pathname);
+
+  const isActive = (href: string) => {
+    const base = stripSlash(href);
+    return base === "/" ? currentPath === "/" : currentPath === base || currentPath.startsWith(`${base}/`);
+  };
   const linkCls = (href: string) =>
     `transition-colors ${isActive(href) ? "text-orange" : "hover:text-white"}`;
 
@@ -62,7 +69,7 @@ export default function Nav() {
                 </div>
                 <div className="mt-2 grid gap-2 sm:grid-cols-2">
                   {products.map((product) => {
-                    const active = pathname === `/produits/${product.slug}`;
+                    const active = currentPath === `/produits/${product.slug}`;
                     return (
                     <Link
                       key={product.slug}
@@ -120,7 +127,7 @@ export default function Nav() {
                 </div>
                 <div className="mt-2 grid gap-2">
                   {services.map((service, index) => {
-                    const active = pathname === `/services/${service.slug}`;
+                    const active = currentPath === `/services/${service.slug}`;
                     return (
                     <Link
                       key={service.slug}
