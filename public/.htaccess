@@ -17,6 +17,24 @@ DirectoryIndex index.html index.php
   # --- Racine -> version française ---
   RewriteRule ^$ /fr/ [L,R=302]
 
+  # --- Anciennes URLs WordPress (indexées par Google) -> nouvelles pages ---
+  # À garder : sans ces règles, les liens déjà référencés renvoient une 404.
+  RedirectMatch 301 ^/accueil/qui-sommes-nous/?$            /fr/about/
+  RedirectMatch 301 ^/accueil/contact/?$                    /fr/contact/
+  RedirectMatch 301 ^/accueil/services/?$                   /fr/services/
+  RedirectMatch 301 ^/accueil/services/etude-et-conception/?$      /fr/services/etude-conception/
+  RedirectMatch 301 ^/accueil/services/installation-et-montage/?$  /fr/services/installation-montage/
+  RedirectMatch 301 ^/accueil/services/controle-des-installations/?$ /fr/services/controle-installations/
+  RedirectMatch 301 ^/accueil/services/service-apres-vente/?$      /fr/services/service-apres-vente/
+  RedirectMatch 301 ^/accueil/services/pre-construction/?$         /fr/services/
+  RedirectMatch 301 ^/accueil/produits/rayonnage-lourd/?$          /fr/produits/rayonnage-lourd/
+  RedirectMatch 301 ^/accueil/produits/rayonnage-lourd-leger/?$    /fr/produits/semi-lourd-leger/
+  RedirectMatch 301 ^/accueil/produits/plateforme-de-stockage/?$   /fr/produits/plateformes-stockage/
+  RedirectMatch 301 ^/accueil/produits/mainutention-et-securite/?$ /fr/produits/protection-securite/
+  RedirectMatch 301 ^/accueil/produits/accessoires/?$              /fr/produits/accessoires-manutention/
+  RedirectMatch 301 ^/accueil/produits/cantilever/?$               /fr/produits/cantilever/
+  RedirectMatch 301 ^/accueil/?$                                   /fr/
+
   # --- Anciennes URLs sans préfixe (/contact -> /fr/contact/) ---
   # On ne touche ni aux fichiers/dossiers réels, ni aux langues, ni au PHP.
   RewriteCond %{REQUEST_FILENAME} !-f
