@@ -118,10 +118,10 @@ function ContactContent() {
                       {t("hero.fillForm")} →
                     </a>
                     <a
-                      href="mailto:abdelghani.ennaciri@omakrayonnage.com"
+                      href="mailto:contact@omakrayonnage.com"
                       className="rounded-full border border-white/14 px-5 py-3 text-[13px] font-bold text-white/78 transition-colors hover:text-white md:px-6 md:text-[14px]"
                     >
-                      abdelghani.ennaciri@omakrayonnage.com
+                      contact@omakrayonnage.com
                     </a>
                   </div>
                 </div>
