@@ -1,0 +1,50 @@
+name: Déploiement sur cPanel
+
+# À chaque push sur main : on construit le site et on envoie le résultat
+# par FTP vers public_html. Seuls les fichiers modifiés sont transférés
+# (l'action garde un état de synchronisation sur le serveur).
+on:
+  push:
+    branches: [main]
+  # Permet aussi de relancer un déploiement à la main depuis l'onglet Actions.
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Construire le site statique
+        run: npm run build
+
+      - name: Envoyer sur cPanel
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          # Le "/" final est obligatoire des deux côtés.
+          local-dir: ./out/
+          server-dir: ./
+          # Fichiers du serveur à ne jamais supprimer (certificat SSL, scripts cPanel).
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.well-known/**
+            **/cgi-bin/**
