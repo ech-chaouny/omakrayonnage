@@ -13,7 +13,7 @@ declare(strict_types=1);
 // Réglages — à adapter si l'adresse change.
 // ---------------------------------------------------------------------------
 $TO      = 'contact@omakrayonnage.com';          // destinataire des demandes
-$FROM    = 'no-reply@omakrayonnage.com';         // doit appartenir au domaine
+$FROM    = 'contact@omakrayonnage.com';          // doit exister sur le domaine
 $SUBJECT = 'Nouvelle demande de devis — omakrayonnage.com';
 
 header('Content-Type: application/json; charset=utf-8');
