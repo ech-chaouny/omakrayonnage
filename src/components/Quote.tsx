@@ -34,7 +34,7 @@ export default function Quote() {
         <Reveal className="reveal-img aspect-[16/11] rounded-[28px] shadow-[0_24px_80px_rgba(17,19,21,.10)] ring-1 ring-black/10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/img/about-team-clean.png"
+            src="/img/about-team-clean.webp"
             alt="OMAK RAYONNAGE"
             className="h-full w-full object-cover"
           />

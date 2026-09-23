@@ -131,7 +131,7 @@ function ContactContent() {
                     <div className="relative min-h-[240px] overflow-hidden rounded-[22px] md:rounded-[24px] lg:min-h-[360px]">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src="/img/cta-etude-clean.png"
+                        src="/img/cta-etude-clean.webp"
                         alt={t("hero.imageAlt")}
                         className="absolute inset-0 h-full w-full object-cover"
                       />

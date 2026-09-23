@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Omit<LayoutProps, "children">
       siteName: "OMAK RAYONNAGE",
       locale: ogLocales[locale as Locale] ?? "fr_MA",
       type: "website",
-      images: [{ url: "/img/og-omak-rayonnage.png", width: 1200, height: 630, alt: t("ogImageAlt") }],
+      images: [{ url: "/img/og-omak-rayonnage.jpg", width: 1200, height: 630, alt: t("ogImageAlt") }],
     },
   };
 }

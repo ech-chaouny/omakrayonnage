@@ -97,7 +97,7 @@ function AboutContent() {
                 <div className="relative min-h-[260px] lg:h-full lg:min-h-[340px]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/img/about-team-clean.png"
+                    src="/img/about-team-clean.webp"
                     alt={t("hero.imageAlt")}
                     className="h-full min-h-[260px] w-full object-cover lg:min-h-[340px]"
                   />
