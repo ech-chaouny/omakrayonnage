@@ -10,7 +10,12 @@ export default function RootPage() {
       </head>
       <body style={{ margin: 0, background: "#08080e", color: "#fff", fontFamily: "system-ui, sans-serif" }}>
         <p style={{ display: "grid", placeItems: "center", minHeight: "100vh" }}>
-          <a href="/fr/" style={{ color: "#f2481c" }}>omakrayonnage.com/fr</a>
+          {/* Document brut, hors du layout de l'app : le lien natif est voulu
+              (next/link n'a pas de router à ce niveau). */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a href="/fr/" style={{ color: "#f2481c" }}>
+            omakrayonnage.com/fr
+          </a>
         </p>
       </body>
     </html>
